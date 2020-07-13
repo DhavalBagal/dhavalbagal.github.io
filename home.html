@@ -430,7 +430,20 @@
         font-weight: 300;
         color: white;
         background-color: #28292B;
+        user-select: none;
+        -webkit-user-select: none; /* Chrome/Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+ */
+        animation-name: btn-zoom-effect2;
+        animation-duration: 0.5s;
       }
+
+      @keyframes btn-zoom-effect2{
+        0% {}
+        50% {transform: scale(1.2); }
+        100% {transform: scale(1);}
+      }
+
       .main-sub-heading{
         color: #28292B;
         font-weight: 400;
@@ -1102,7 +1115,7 @@
         <div class="intro-container-1">
           <p class="intro-first-line-text-container">Hi, I'm Dhaval Bagal</p>
           <p class="intro-second-line-text-container">I am a Computer Engineer with a predilection towards A.I. and Product Development</p>
-          <a class="resume-btn" target="_blank" src="resume.pdf">GET MY RESUME</a>
+          <a class="resume-btn" target="_blank" src="https://dhavalbagal.github.io/portfolio/resume.pdf">GET MY RESUME</a>
         </div>
       </div>
       
