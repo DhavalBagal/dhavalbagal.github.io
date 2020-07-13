@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Dhaval Bagal</title>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+    <style>
+      /* 200px - 400px [xs] */
+      @media only screen and (min-width: 200px) {
+        .navbar-container, .navbar-db-logo-img{height: 15.5vw;}
+        .collapsible-navbar{top: 15.5vw; display: flex;}
+        .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
+        .main-container{top: 15.5vw;}
+        .navbar-db-logo-img{width: 36.58vw;}
+        .collapsed-navbar-logo-container{width: 12.6vw; height: 12.6vw; display: flex;}
+        .collapsed-navbar-logo-top-line, .collapsed-navbar-logo-mid-line, .collapsed-navbar-logo-bottom-line{width: 4.8vw;}
+        .intro-container-0{
+          flex-direction: column; 
+          align-items: center; 
+        }
+        .dp-img{
+          width: 24vw; 
+          height: 24vw;
+          margin-top: 6vw;
+          align-self: center;
+        }
+        .intro-container-1{
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+        }
+        .intro-first-line-text-container{
+          font-size: 6vw;
+          word-wrap: break-word;
+          width: 60%;
+          text-align: center;
+          margin-top: 3vw;
+        }
+        .intro-second-line-text-container{
+          font-size: 3.7vw;
+          word-wrap: break-word;
+          width: 80%;
+          text-align: center;
+        }
+        .resume-btn{margin-top: 2.5vw; margin-bottom: 2.5vw;}
+        .main-sub-heading{font-size: 3.2vw; margin-top: 6vw; margin-bottom: 1.5vw;}
+        .accomplishments-sub-heading{font-size: 3vw; margin-top: 3vw; margin-bottom: 2vw;}
+        .accomplishments-sub-heading:before{font-size: 6vw; }
+        .profile-summary-container{width: 80vw;}
+        .profile-summary-item, .preferences-item, .tech-stack-item, .education-institute-item, .work-company-item, .common-container-heading{font-size: 2.9vw; }
+        .education-details-item, .work-duration-item, .common-container-mid-line{font-size: 2.7vw;}
+        .work-description-item, .common-container-description, .common-container-btn-1, .common-container-btn-2{font-size: 2.5vw;}
+        .education-score-item{font-size: 2.5vw;}
+        .common-container-2-heading{width: 40vw; font-size: 2.9vw;}
+        .common-container-2-heading-width{width: 50vw;}
+        .score-box{font-size: 3.4vw;}
+      }
+
+      /* 400px - 600px [sm] */
+      @media only screen and (min-width: 400px) {
+        .navbar-container, .navbar-db-logo-img{height: 12.5vw;}
+        .collapsible-navbar{top: 12.5vw;display: flex;}
+        .collapsible-navbar-item, .collapsed-navbar-logo-container{display: flex;}
+        .main-container{top: 12.5vw;}
+        .navbar-db-logo-img{width: 29.5vw;}
+        .collapsed-navbar-logo-container{width: 11vw; height: 11vw; display: flex;}
+        .collapsed-navbar-logo-top-line, .collapsed-navbar-logo-mid-line, .collapsed-navbar-logo-bottom-line{width: 4.6vw;}
+        .intro-container-0{
+          flex-direction: column; 
+          align-items: center;
+        }
+        .dp-img{
+          width: 24vw; 
+          height: 24vw;
+          margin-top: 6vw;
+          align-self: center;
+        }
+        .intro-container-1{
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          
+        }
+        .intro-first-line-text-container{
+          font-size: 6vw;
+          word-wrap: break-word;
+          width: 60%;
+          text-align: center;
+          margin-top: 3vw;
+        }
+        .intro-second-line-text-container{
+          font-size: 3.7vw;
+          word-wrap: break-word;
+          width: 80%;
+          text-align: center;
+        }
+        .resume-btn{margin-top: 2.5vw; margin-bottom: 2.5vw;}
+        .main-sub-heading{font-size: 3.2vw; margin-top: 6vw; margin-bottom: 1.5vw;}
+        .accomplishments-sub-heading{font-size: 3vw; margin-top: 3vw; margin-bottom: 2vw;}
+        .accomplishments-sub-heading:before{font-size: 6vw;}
+        .profile-summary-container{width: 80vw;}
+        .profile-summary-item, .preferences-item, .tech-stack-item, .education-institute-item, .work-company-item, .common-container-heading{font-size: 2.9vw; }
+        .education-details-item, .work-duration-item, .common-container-mid-line{font-size: 2.7vw;}
+        .work-description-item, .common-container-description, .common-container-btn-1, .common-container-btn-2{font-size: 2.5vw;}
+        .education-score-item{font-size: 2.5vw;}
+        .common-container-2-heading{width: 40vw; font-size: 2.9vw;}
+        .common-container-2-heading-width{width: 50vw;}
+        .score-box{font-size: 3.4vw;}
+      }
+
+      /* 600px - 768px [md] */
+      @media only screen and (min-width: 600px) {
+        .navbar-container, .navbar-db-logo-img{height: 10.5vw;}
+        .collapsible-navbar{height: 0vw; display: none;}
+        .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
+        .main-container{top: 10.5vw;}
+        .navbar-db-logo-img{width: 24.78vw;}
+        .collapsed-navbar-logo-container{width: 8.6vw; height: 8.6vw;}
+        .collapsed-navbar-logo-top-line, .collapsed-navbar-logo-mid-line, .collapsed-navbar-logo-bottom-line{width: 4.4vw;}
+        .intro-container-0{
+          flex-direction: row; 
+          align-items: flex-start;
+          margin-top: 4vw;
+        }
+        .dp-img{
+          width: 18vw; 
+          height: 18vw;
+          margin-top: 0;
+          align-self: flex-start;
+        }
+        .intro-container-1{
+          padding-left: 2vw;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          margin-top: 0;
+        }
+        .intro-first-line-text-container{
+          font-size: 5vw;
+          width: 100%;
+          text-align: left;
+          margin-top: 0.5vw;
+        }
+        .intro-second-line-text-container{
+          font-size: 2.7vw;
+          width: 100%;
+          text-align: left;
+        }
+        .resume-btn{margin-top: 2vw; margin-bottom: 2vw;}
+        .main-sub-heading{font-size: 2.2vw; margin-top: 4.5vw; margin-bottom: 3vw;}
+        .accomplishments-sub-heading{font-size: 2vw; margin-top: 3vw; margin-bottom: 2vw;}
+        .accomplishments-sub-heading:before{font-size: 4vw;}
+        .profile-summary-container{width: 60vw;}
+        .profile-summary-item, .preferences-item, .tech-stack-item, .education-institute-item, .work-company-item, .common-container-heading{font-size: 1.9vw;}
+        .education-details-item, .work-duration-item, .common-container-mid-line{font-size: 1.7vw;}
+        .work-description-item, .common-container-description, .common-container-btn-1, .common-container-btn-2{font-size: 1.5vw;}
+        .education-score-item{font-size: 1.5vw;}
+        .common-container-2-heading{width: 40vw; font-size: 1.9vw;}
+        .common-container-2-heading-width{width: 50vw;}
+        .score-box{font-size: 2.4vw;}
+      }
+
+      /* 768px - 992px [lg] */
+      @media only screen and (min-width: 768px){
+        .navbar-container, .navbar-db-logo-img{height: 8.5vw;}
+        .collapsible-navbar{height: 0vw; display: none;}
+        .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
+        .main-container{top: 8.5vw;}
+        .navbar-db-logo-img{width: 20.06vw;}
+        .collapsed-navbar-logo-container{width: 6.2vw; height: 6.2vw;}
+        .collapsed-navbar-logo-top-line, .collapsed-navbar-logo-mid-line, .collapsed-navbar-logo-bottom-line{
+          width: 4.2vw;
+          margin-top: 0.4vw;
+          margin-bottom: 0.4vw;
+        }
+        .intro-container-0{
+          flex-direction: row; 
+          align-items: flex-start;
+          margin-top: 4vw;
+        }
+        .dp-img{
+          width: 16vw; 
+          height: 16vw;
+          margin-top: 0;
+          align-self: flex-start;
+        }
+        .intro-container-1{
+          padding-left: 2vw;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          margin-top: 0;
+        }
+        .intro-first-line-text-container{
+          font-size: 5vw;
+          width: 100%;
+          text-align: left;
+          margin-top: 0.5vw;
+        }
+        .intro-second-line-text-container{
+          font-size: 2.7vw;
+          width: 100%;
+          text-align: left;
+        }
+        .resume-btn{margin-top: 2vw; margin-bottom: 2vw;}
+        .main-sub-heading{font-size: 2.2vw; margin-top: 4.5vw; margin-bottom: 3vw;}
+        .accomplishments-sub-heading{font-size: 2vw; margin-top: 3vw; margin-bottom: 2vw;}
+        .accomplishments-sub-heading:before{font-size: 4vw;}
+        .profile-summary-container{width: 60vw;}
+        .profile-summary-item, .preferences-item, .tech-stack-item, .education-institute-item, .work-company-item, .common-container-heading{font-size: 1.9vw;}
+        .education-details-item, .work-duration-item, .common-container-mid-line{font-size: 1.7vw;}
+        .work-description-item, .common-container-description, .common-container-btn-1, .common-container-btn-2{font-size: 1.5vw;}
+        .education-score-item{font-size: 1.5vw;}
+        .common-container-2-heading{width: 30vw; font-size: 1.9vw;}
+        .common-container-2-heading-width{width: 40vw;}
+        .score-box{font-size: 2.4vw;}
+      }
+
+      /* 992px - 1200px [xl] */
+      @media only screen and (min-width: 992px) {
+        .navbar-container, .navbar-db-logo-img{height: 7.5vw;}
+        .collapsible-navbar{height: 0vw; display: none;}
+        .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
+        .main-container{top: 7.5vw;}
+        .navbar-db-logo-img {width: 17.7vw;}
+        .collapsed-navbar-logo-container{width: 5vw; height: 5vw;}
+        .collapsed-navbar-logo-top-line, .collapsed-navbar-logo-mid-line, .collapsed-navbar-logo-bottom-line{
+          width: 4vw;
+          margin-top: 0.3vw;
+          margin-bottom: 0.3vw;
+        }
+        .intro-container-0{
+          flex-direction: row; 
+          align-items: flex-start; 
+          margin-top: 4vw;
+        }
+        .dp-img{
+          width: 14vw; 
+          height: 14vw;
+          margin-top: 0;
+          align-self: flex-start;
+        }
+        .intro-container-1{
+          padding-left: 2vw;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          margin-top: 0;
+        }
+        .intro-first-line-text-container{
+          font-size: 4vw;
+          width: 100%;
+          text-align: left;
+          margin-top: 0.5vw;
+        }
+        .intro-second-line-text-container{
+          font-size: 1.9vw;
+          width: 100%;
+          text-align: left;
+        }
+        .resume-btn{margin-top: 1.5vw; margin-bottom: 1.5vw;}
+        .main-sub-heading{font-size: 1.7vw; margin-top: 4vw; margin-bottom: 2.5vw;}
+        .accomplishments-sub-heading{font-size: 1.5vw; margin-top: 3vw; margin-bottom: 2vw;}
+        .accomplishments-sub-heading:before{font-size: 3vw;}
+        .profile-summary-container{width: 60vw;}
+        .profile-summary-item, .preferences-item, .tech-stack-item, .education-institute-item, .work-company-item, .common-container-heading{font-size: 1.4vw;}
+        .education-details-item, .work-duration-item, .common-container-mid-line{font-size: 1.2vw;}
+        .work-description-item, .common-container-description, .common-container-btn-1, .common-container-btn-2{font-size: 1vw;}
+        .education-score-item{font-size: 1vw;}
+        .common-container-2-heading{width: 20vw; font-size: 1.4vw;}
+        .common-container-2-heading-width{width: 30vw;}
+        .score-box{font-size: 1.9vw;}
+      }
+
+      /* 1200px and above [xxl] */
+      @media only screen and (min-width: 1200px) {
+        .navbar-container, .navbar-db-logo-img{height: 6.5vw; background-color: #28292B;}
+        .collapsible-navbar{height: 0vw; display: none;}
+        .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
+        .main-container{top: 6.5vw;}
+        .navbar-db-logo-img{width: 15.34vw;}
+        .collapsed-navbar-logo-container{width: 3.8vw; height: 3.8vw;}
+        .collapsed-navbar-logo-top-line, .collapsed-navbar-logo-mid-line, .collapsed-navbar-logo-bottom-line{
+          width: 3.8vw; 
+          margin-top: 0.3vw;
+          margin-bottom: 0.3vw;
+        }
+        .intro-container-0{
+          flex-direction: row; 
+          align-items: flex-start; 
+          margin-top: 4vw;
+        }
+        .dp-img{
+          width: 12vw; 
+          height: 12vw;
+          margin-top: 0;
+          align-self: flex-start;
+        }
+        .intro-container-1{
+          padding-left: 2vw;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          margin-top: 0;
+        }
+        .intro-first-line-text-container{
+          font-size: 4vw;
+          width: 100%;
+          text-align: left;
+          margin-top: 0.5vw;
+        }
+        .intro-second-line-text-container{
+          font-size: 2.2vw;
+          width: 100%;
+          text-align: left;
+        }
+        .resume-btn{margin-top: 1.5vw; margin-bottom: 1.5vw;}
+        .main-sub-heading{font-size: 1.7vw; margin-top: 4vw; margin-bottom: 2.5vw;}
+        .accomplishments-sub-heading{font-size: 1.5vw; margin-top: 3vw; margin-bottom: 2vw;}
+        .accomplishments-sub-heading:before{font-size: 3vw;}
+        .profile-summary-container{width: 60vw;}
+        .profile-summary-item, .preferences-item, .tech-stack-item, .education-institute-item, .work-company-item, .common-container-heading{font-size: 1.4vw;}
+        .education-details-item, .work-duration-item, .common-container-mid-line{font-size: 1.2vw;}
+        .work-description-item, .common-container-description, .common-container-btn-1, .common-container-btn-2{font-size: 1vw;}
+        .education-score-item{font-size: 1vw;}
+        .common-container-2-heading{width: 20vw; font-size: 1.4vw;}
+        .common-container-2-heading-width{width: 30vw;}
+        .score-box{font-size: 1.9vw;}
+      }
+
+      html, body{margin: 0;}
+      *{font-family: "Helvetica Neue";color: #28292B;}
+      .navbar-container{
+        background-color: #28292B; 
+        width: 100vw; 
+        display: flex; 
+        align-items: center; 
+        position: fixed; 
+        top: 0; 
+        left: 0;
+        z-index: 100;
+      }
+      .navbar-db-logo-img{
+        font-weight: 400; 
+        color:white; 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin-left: 2vw;
+        padding-right: 1vw;
+        margin-right: 1vw;
+      }
+      .db-logo2-container{
+        font-weight: 300; 
+        color: white;
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .collapsed-navbar-logo-container{
+        background-color: #28292B; 
+        margin-left: auto; 
+        margin-right: 2vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .collapsed-navbar-logo-top-line, .collapsed-navbar-logo-mid-line, .collapsed-navbar-logo-bottom-line{
+        background-color: white;
+        border-radius: 1vw;
+        height: 0.3vw;
+        margin-top: 0.5vw;
+        margin-bottom: 0.5vw;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+      }
+      .collapsed-navbar-logo-mid-line{animation-duration: 0.3s;}
+      .db-logo2-container-text-dhaval, .db-logo2-container-text-bagal{
+        margin-top: 0.3vw;
+        margin-bottom: 0.3vw;
+        margin-left: 1vw;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .main-container{
+        height: 100vh;
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 76vw;
+        position: absolute;
+        left: 12vw;
+      }
+      .intro-container-0{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .dp-img{border-radius: 50%;}
+      .intro-first-line-text-container{
+        font-weight: 350;
+        margin-top: 0.5vw;
+        margin-bottom: 0.5vw;
+        align-items: center;
+      }
+      .intro-second-line-text-container{
+        font-weight: 300;
+        margin-top: 0.5vw;
+        margin-bottom: 0.5vw;
+        align-items: center;
+      }
+      .resume-btn{
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        font-weight: 300;
+        color: white;
+        background-color: #28292B;
+      }
+      .main-sub-heading{
+        color: #28292B;
+        font-weight: 400;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.3vw solid #28292B;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        width: fit-content;
+        width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+        width: -moz-max-content;    /* Firefox/Gecko */
+        width: -webkit-max-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .profile-summary-container, .preferences-container, .tech-stack-container, .education-container, .work-exp-container, .common-container-1, .common-container-2{
+        list-style-type: square;
+        list-style-position: outside;
+        padding-left: 0vw;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .profile-summary-item, .preferences-item, .tech-stack-item, .education-institute-item, .work-company-item,
+       .common-container-heading, .education-details-item, .work-duration-item, .common-container-mid-line, .common-container-btn-1, .common-container-btn-2, .education-score-item, .work-description-item, .common-container-description{
+        font-weight: 300;
+        padding-left: 1.5vw;
+        text-align: justify;
+      }
+      .preferences-container, .tech-stack-container, .education-container, .work-exp-container, .common-container-1, .common-container-2{width: max-content; }
+      .profile-summary-item{line-height: 1.5;}
+      .preferences-item, .tech-stack-item{line-height: 1.5; width: max-content;}
+      .education-institute-item, .education-score-item, .work-company-item, .common-container-heading{font-weight: 400; line-height: 1.5; width: max-content; word-wrap: break-word;}
+      .education-details-item, .work-duration-item, .common-container-mid-line, .common-container-btn-1, .common-container-btn-2{
+        font-weight: 300; 
+        line-height: 1.5; 
+        width: max-content;
+      }
+      .work-description-item{
+        line-height: 1.5; 
+        width: 70vw;
+        word-wrap: break-word; 
+        display: block;
+        margin-top: 1vw;
+        border-top: 0.15vw solid #28292B;
+        border-bottom: 0.15vw solid #28292B;
+      } 
+      
+      .common-container-description{
+        line-height: 1.5; 
+        width: 70vw;
+        display: block;
+        word-wrap: break-word;
+        margin-top: 1vw;
+        border-top: 0.15vw solid #28292B;
+        border-bottom: 0.15vw solid #28292B;
+      }
+      .common-container-heading{
+        line-height: 1.5; 
+        width: max-content;
+        max-width: 70vw;
+        word-wrap: break-word; 
+        display: inline-block;
+        margin-top: 1vw;
+        user-select: none;
+        -webkit-user-select: none; /* Chrome/Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+ */
+      }
+      .common-container-2-heading{
+        line-height: 1.5; 
+        word-wrap: break-word; 
+        display: inline-block;
+        margin-top: 1vw;
+        user-select: none;
+        -webkit-user-select: none; /* Chrome/Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+ */
+      }
+      ul{padding-left: 0;}
+      .accomplishments-sub-heading{
+        color: #28292B;
+        user-select: none;
+        -webkit-user-select: none; /* Chrome/Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+ */
+        font-weight: 400;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        width: fit-content;
+        width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+        width: -moz-max-content;    /* Firefox/Gecko */
+        width: -webkit-max-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .accomplishments-sub-heading:hover{
+        animation-name: btn-zoom-effect;
+        animation-duration: 0.5s;
+      }
+      .score-box{display: inline-block;}
+      .accomplishments-sub-heading:before, .score-box{
+        font-weight: 400;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 1.5vw;
+        width: fit-content;
+        width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+        width: -moz-max-content;    /* Firefox/Gecko */
+        width: -webkit-max-content;
+      }
+      .common-container-btn-1, .common-container-btn-2{
+        text-decoration: none;
+        border: 2px solid #28292B;
+        padding-left: 0;
+        margin-left: 0.5vw;
+        font-weight: 400;
+        margin-top: 1vw;
+        line-height: 1;
+      }
+      .footer{
+        background-color: #28292B;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        width: 100vw;
+        margin-top: 5vw;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+      }
+      .icon{
+        width: 3vw;
+        height: 3vw;
+        display: inline-block;
+      }
+      .copyright{
+        width: max-content; 
+        color: white; 
+        text-align: center;
+        font-weight: 300;
+        font-size: 1.5vw;
+        position: absolute;
+        top: 2vw;
+        right: 5vw;
+      }
+      .collapsible-navbar{
+        background-color: #28292B;
+        color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 0vw;
+        position: fixed;
+        z-index: 200;
+      }
+      .collapsible-navbar-item{
+        display: none;
+        color: white;
+        font-size: 4vw;
+        line-height: 4vw;
+        margin-top: 2.5vw;
+        margin-bottom: 2.5vw;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      @keyframes btn-zoom-effect{
+        0% {}
+        50% {transform: scale(1.2); border: 0.15vw solid white;}
+        100% {transform: scale(1); border: none;}
+      }
+      .collapsible-navbar-item:hover{
+        animation-name: btn-zoom-effect;
+        animation-duration: 0.5s;
+      }
+
+      @keyframes mid-line-leave {
+        50% {transform: scaleX(3);}
+        100% {transform: translateX(-110vw);}
+      }
+
+      @keyframes mid-line-arrive {
+        0% {transform: translateX(-110vw);}
+        50% {transform: scaleX(1);}
+      }
+
+      @keyframes rotate-clockwise-cross {
+        100% {transform-origin: left top; transform: rotate(45deg);}
+      }
+
+      @keyframes rotate-anticlockwise-cross {
+        100% {transform-origin: left bottom; transform: rotate(-45deg);}
+      }
+
+      @keyframes rotate-clockwise-straight {
+        100% {transform-origin: left bottom; transform: rotate(0deg);}
+      }
+
+      @keyframes rotate-anticlockwise-straight {
+        100% {transform-origin: left top; transform: rotate(0deg);}
+      }
+
+      @keyframes small-nav-open{100%{height: max-content;}}
+      @keyframes small-nav-close{100%{height: 0vw;}}
+    </style>
+
+    <script>
+
+      var ip;
+      $(document).ready(function(){
+        ip = location.host;
+        display();
+        $('.projects-container').css('display','none');
+        $('.patents-container').css('display','none');
+        $('.publications-container').css('display','none');
+        $('.certifications-container').css('display','none');
+        $('.accolades-container').css('display','none');
+        $('.skills-container').css('display','none');
+        $('.scores-container').css('display','none');
+        
+        setTimeout(function(){
+          $('.common-container-description').css('display','none');
+          $('.work-description-item').css('display','none');
+
+          $('.projects-sub-heading').click(function(){
+            $('html, body').animate({
+                scrollTop: $('.projects-sub-heading').offset().top-150
+            });
+            $('div[name="active"]').css('display', 'none');
+            $('div[name="active"]').attr('name', 'inactive');
+            $('.projects-container').css('display','flex');
+            $('.projects-container').attr('name','active');
+            
+          });
+
+          $('.patents-sub-heading').click(function(){
+            $('html, body').animate({
+                scrollTop: $('.patents-sub-heading').offset().top-150
+            });
+            $('div[name="active"]').css('display', 'none');
+            $('div[name="active"]').attr('name', 'inactive');
+            $('.patents-container').css('display','flex');
+            $('.patents-container').attr('name','active');
+            
+          });
+
+          $('.publications-sub-heading').click(function(){
+            $('html, body').animate({
+                scrollTop: $('.publications-sub-heading').offset().top-150
+            });
+            $('div[name="active"]').css('display', 'none');
+            $('div[name="active"]').attr('name', 'inactive');
+            $('.publications-container').css('display','flex');
+            $('.publications-container').attr('name','active');
+            
+          });
+
+          $('.certifications-sub-heading').click(function(){
+            $('html, body').animate({
+                scrollTop: $('.certifications-sub-heading').offset().top-150
+            });
+            $('div[name="active"]').css('display', 'none');
+            $('div[name="active"]').attr('name', 'inactive');
+            $('.certifications-container').css('display','flex');
+            $('.certifications-container').attr('name','active');
+            
+          });
+
+          $('.accolades-sub-heading').click(function(){
+            $('html, body').animate({
+                scrollTop: $('.accolades-sub-heading').offset().top-150
+            });
+            $('div[name="active"]').css('display', 'none');
+            $('div[name="active"]').attr('name', 'inactive');
+            $('.accolades-container').css('display','flex');
+            $('.accolades-container').attr('name','active');
+            
+          });
+
+          $('.skills-sub-heading').click(function(){
+            $('html, body').animate({
+                scrollTop: $('.skills-sub-heading').offset().top-200
+            });
+            $('div[name="active"]').css('display', 'none');
+            $('div[name="active"]').attr('name', 'inactive');
+            $('.skills-container').css('display','flex');
+            $('.skills-container').attr('name','active');
+          
+          });
+
+          $('.scores-sub-heading').click(function(){
+            $('html, body').animate({
+                scrollTop: $('.scores-sub-heading').offset().top-200
+            });
+            $('div[name="active"]').css('display', 'none');
+            $('div[name="active"]').attr('name', 'inactive');
+            $('.scores-container').css('display','flex');
+            $('.scores-container').attr('name','active');
+            
+          });
+
+          $(".projects-title").click(function(){displayDescription()});
+          $(".patents-title").click(function(){displayDescription()});
+          $(".publications-title").click(function(){displayDescription()});
+          $(".accolades-title").click(function(){displayDescription()});
+          $(".work-company-item").click(function(){displayWorkDesc()});
+
+          $(".collapsed-navbar-logo-container").click(function(){
+            if($(".collapsible-navbar").css("height")=="0px")
+            {
+              $(".collapsed-navbar-logo-top-line").css("animation-name","rotate-clockwise-cross");
+              $(".collapsed-navbar-logo-bottom-line").css("animation-name","rotate-anticlockwise-cross");
+              $(".collapsed-navbar-logo-mid-line").css("animation-name","mid-line-leave");
+
+              $(".collapsible-navbar").css({"height":"max-content", "display":"flex"});
+              $(".collapsible-navbar-item").css({"display":"block"});
+            }
+            else
+            {
+              closeSmallNavBar();
+            }
+          });
+
+          $(".prof-summary-navitem").click(function(){
+            $('html, body').animate({scrollTop: $('.profile-summary-heading').offset().top-100});
+            closeSmallNavBar();
+          });
+          $(".pref-navitem").click(function(){
+            $('html, body').animate({scrollTop: $('.preferences-heading').offset().top-100});
+            closeSmallNavBar();
+          });
+          $(".tech-stack-navitem").click(function(){
+            $('html, body').animate({scrollTop: $('.tech-stack-heading').offset().top-100});
+            closeSmallNavBar();
+          });
+          $(".education-navitem").click(function(){
+            $('html, body').animate({scrollTop: $('.education-heading').offset().top-100});
+            closeSmallNavBar();
+          });
+          $(".work-ex-navitem").click(function(){
+            $('html, body').animate({scrollTop: $('.work-ex-heading').offset().top-100});
+            closeSmallNavBar();
+          });
+          $(".projects-navitem").click(function(){
+            $('html, body').animate({scrollTop: $('.projects-sub-heading').offset().top-100});
+            closeSmallNavBar();
+          });
+          $(".patents-navitem").click(function(){
+            $('html, body').animate({scrollTop: $('.patents-sub-heading').offset().top-100});
+            closeSmallNavBar();
+          });
+          $(".pubs-navitem").click(function(){
+            $('html, body').animate({scrollTop: $('.publications-sub-heading').offset().top-100});
+            closeSmallNavBar();
+          });
+          $(".cert-navitem").click(function(){
+            $('html, body').animate({scrollTop: $('.certifications-sub-heading').offset().top-100});
+            closeSmallNavBar();
+          });
+          $(".accolades-navitem").click(function(){
+            $('html, body').animate({scrollTop: $('.accolades-sub-heading').offset().top-100});
+            closeSmallNavBar();
+          });
+          $(".skills-navitem").click(function(){
+            $('html, body').animate({scrollTop: $('.skills-sub-heading').offset().top-100});
+            closeSmallNavBar();
+          });
+          $(".scores-navitem").click(function(){
+            $('html, body').animate({scrollTop: $('.scores-sub-heading').offset().top-100});
+            closeSmallNavBar();
+          });
+
+        },500);
+        
+      });
+
+      $(window).on('resize', function(){
+            if ($(window).width()>600) closeSmallNavBar();
+      });
+
+      closeSmallNavBar = function()
+      {
+        $(".collapsed-navbar-logo-top-line").css("animation-name","rotate-anticlockwise-straight");
+        $(".collapsed-navbar-logo-bottom-line").css("animation-name","rotate-clockwise-straight");
+        $(".collapsed-navbar-logo-mid-line").css("animation-name","mid-line-arrive");
+        $(".collapsible-navbar").css({"height":"0vw", "display":"none"});
+        $(".collapsible-navbar-item").css({"display":"none"});
+      }
+
+      displayWorkDesc = function(){
+        id = event.target.id;
+        id = id.replace("-","-desc-");
+        $('.work-description-item').css('display','none');
+        $("#"+id).toggle();
+      }
+      displayDescription = function(){
+        id = event.target.id;
+        id = id.replace("-","-desc-");
+        $(".common-container-description").css("display","none");
+        $("#"+id).toggle();
+      }
+
+      display = function(){
+        displayProfileSummary(); 
+        displayPreferences();
+        displayTechStack();
+        displayEducation();
+        displayWorkExp();
+        displayProjects();
+        displayPatents();
+        displayPublications();
+        displayCertifications();
+        displayAccolades();
+        displaySkills();
+        displayScores();
+      }
+
+      displayProfileSummary = function(){
+        $.getJSON("http://" + ip + "/data.json", function (data){
+          points = data.profile_summary;
+
+          $.each(points, function(i, point){
+            $(".profile-summary-container").append('<li class="profile-summary-item">'+point+'</li>');
+          });
+        });
+      }
+
+      displayPreferences = function(){
+        $.getJSON("http://" + ip + "/data.json", function (data){
+          points = data.preferences;
+
+          $.each(points, function(i, point){
+            $(".preferences-container").append('<li class="preferences-item">'+point+'</li>');
+          });
+        });
+      }
+
+      displayTechStack = function(){
+        $.getJSON("http://" + ip + "/data.json", function (data){
+          points = data.tech_stack;
+
+          for(var key in points){
+            $('.tech-stack-container').append('<li> \
+            <span class="tech-stack-item" style="font-weight:400;">'+key+'</span><br>\
+            <span class="tech-stack-item" style="line-height:2;">'+points[key]+'</span><br>\
+            </li>')
+          }
+        });
+      }
+
+      displayEducation = function(){
+        $.getJSON("http://" + ip + "/data.json", function (data){
+          points = data.education;
+
+          $.each(points, function(i, point){
+
+            if(point['score'].trim()==="#")
+            {
+              $(".education-container").append('<li>\
+                <span class="education-institute-item">'+point['institute']+'</span><br>\
+                <span class="education-details-item">'+point['course']+', '+point['duration']+'</span><br>\
+              </li><br>');
+              
+            }
+            else{
+              $(".education-container").append('<li>\
+                <span class="education-institute-item">'+point['institute']+'</span><br>\
+                <span class="education-details-item">'+point['course']+', '+point['duration']+'</span><br>\
+                <span class="education-score-item"> Grade: '+point['score']+'</span><br>\
+              </li><br>');
+            }
+          });
+        });
+      }
+
+      displayWorkExp = function(){
+        $.getJSON("http://" + ip + "/data.json", function (data){
+          points = data.work_exp;
+
+          $.each(points, function(i, point){
+              $(".work-exp-container").append('<li>\
+                <span class="work-company-item" id="workex-'+i.toString()+'">'+point['company']+'</span><br>\
+                <span class="work-duration-item">'+point['duration']+', </span><br>\
+                <span class="work-description-item" id="workex-desc-'+i.toString()+'">'+point['work']+'</span><br>\
+              </li>');
+          });
+        });
+      }
+
+      displayProjects = function(){
+        
+        $.getJSON("http://" + ip + "/data.json", function (data){
+          points = data.projects;
+          $('head').append('<style>.projects-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
+          $.each(points, function(i, point){
+            if (point["link-to-demo"].trim()==="#")
+            {
+              $(".projects-container").append('<li>\
+                <span class="common-container-heading projects-title" id="proj-'+i.toString()+'" >'+point['title']+'</span><br>\
+                <span class="common-container-mid-line">'+point['project-scale']+', '+point['date']+'</span><br>\
+                <a target="_blank" href="'+point['link-to-code']+'" class="common-container-btn-1" style="margin-left: 1.5vw;">CODE</a><br>\
+                <span class="common-container-description" id="proj-desc-'+i.toString()+'" >'+point['description']+'</span><br>\
+              </li>');
+            }
+            else{
+              $(".projects-container").append('<li>\
+                <span class="common-container-heading projects-title" id="proj-'+i.toString()+'">'+point['title']+'</span><br>\
+                <span class="common-container-mid-line">'+point['project-scale']+', '+point['date']+'</span><br>\
+                <a target="_blank" href="'+point['link-to-code']+'" class="common-container-btn-1" style="margin-left: 1.5vw;">CODE</a>\
+                <a target="_blank" href="'+point['link-to-demo']+'" class="common-container-btn-2">DEMO</a><br>\
+                <span class="common-container-description" id="proj-desc-'+i.toString()+'">'+point['description']+'</span><br>\
+              </li>');
+            }
+          });
+        });
+      }
+
+      displayPatents = function(){
+        $.getJSON("http://" + ip + "/data.json", function (data){
+          points = data.patents;
+          $('head').append('<style>.patents-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
+          $.each(points, function(i, point){
+            if (point["link"].trim()==="#"){
+              $(".patents-container").append('<li>\
+                <span class="common-container-heading patents-title" id="patents-'+i.toString()+'">'+point['title']+'</span><br>\
+                <span class="common-container-mid-line">'+point['ref-and-status']+', '+point['date']+'</span>\
+                <span class="common-container-description" id="patents-desc-'+i.toString()+'">'+point['description']+'</span><br>\
+              </li>');
+            }
+            else{
+              $(".patents-container").append('<li>\
+                <span class="common-container-heading patents-title" id="patents-'+i.toString()+'">'+point['title']+'</span><br>\
+                <span class="common-container-mid-line">'+point['ref-and-status']+', '+point['date']+'</span><br>\
+                <a target="_blank" href="'+point['link']+'" class="common-container-btn-1" style="margin-left: 1.5vw;">VIEW</a><br>\
+                <span class="common-container-description" id="patents-desc-'+i.toString()+'">'+point['description']+'</span><br>\
+              </li>');
+            }
+          });
+        });
+      }
+
+      displayPublications = function(){
+        $.getJSON("http://" + ip + "/data.json", function (data){
+          points = data.publications;
+          $('head').append('<style>.publications-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
+          $.each(points, function(i, point){
+            if (point["link"].trim()==="#"){
+              $(".publications-container").append('<li>\
+                <span class="common-container-heading publications-title" id="pub-'+i.toString()+'">'+point['title']+'</span><br>\
+                <span class="common-container-mid-line">'+point['publisher']+', '+point['date']+'</span>\
+                <span class="common-container-description" id="pub-desc-'+i.toString()+'">'+point['description']+'</span><br>\
+              </li>');
+            }
+            else{
+              $(".publications-container").append('<li>\
+                <span class="common-container-heading publications-title" id="pub-'+i.toString()+'">'+point['title']+'</span><br>\
+                <span class="common-container-mid-line">'+point['publisher']+', '+point['date']+'</span><br>\
+                <a target="_blank" href="'+point['link']+'" class="common-container-btn-1" style="margin-left: 1.5vw;">VIEW</a><br>\
+                <span class="common-container-description" id="pub-desc-'+i.toString()+'">'+point['description']+'</span><br>\
+              </li>');
+            }
+          });
+        });
+      }
+
+      displayCertifications = function(){
+        $.getJSON("http://" + ip + "/data.json", function (data){
+          points = data.certifications;
+          $('head').append('<style>.certifications-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
+          $.each(points, function(i, point){
+              $(".certifications-container").append('<li>\
+                <span class="common-container-heading certifications-title">'+point['title']+'</span><br>\
+                <span class="common-container-mid-line">'+point['issuer']+', '+point['date']+'</span><br>\
+                <a target="_blank" href="'+point['link-to-verify']+'" class="common-container-btn-1" style="margin-left: 1.5vw;">VIEW</a><br>\
+              </li><br>');
+          });
+        });
+      }
+
+      displayAccolades = function(){
+        $.getJSON("http://" + ip + "/data.json", function (data){
+          points = data.accolades;
+          $('head').append('<style>.accolades-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
+          $.each(points, function(i, point){
+              $(".accolades-container").append('<li>\
+                <span class="common-container-heading accolades-title" id="accolades-'+i.toString()+'">'+point['title']+'</span><br>\
+                <span class="common-container-mid-line">'+point['issuer']+', '+point['date']+'</span>\
+                <span class="common-container-description" id="accolades-desc-'+i.toString()+'">'+point['description']+'</span><br>\
+              </li>');
+          });
+        });
+      }
+
+      displaySkills = function(){
+        $.getJSON("http://" + ip + "/data.json", function (data){
+          points = data.skills;
+          $('head').append('<style>.skills-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
+          $.each(points, function(i, point){
+              $(".skills-container").append('<li>\
+                <span class="common-container-2-heading skills-title" style="margin-left: 1.5vw; font-weight: 300; float: left; word-wrap: break-word; text-align: left;">'+point['title']+'</span>\
+                <span class="score-box" style="font-weight: 400; padding-right: 0; padding-left: 2vw; float: left; padding-top: 0.8vw;">'+point['score']+'</span>\
+                <span class="common-container-2-heading" style="width: max-content; font-weight: 300; padding-left: 1vw;">/ '+point['out-of']+'</span>\
+              </li>');
+          });
+        });
+      }
+
+      displayScores = function(){
+        $.getJSON("http://" + ip + "/data.json", function (data){
+          points = data.scores;
+          $('head').append('<style>.scores-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
+          $.each(points, function(i, point){
+              $(".scores-container").append('<li>\
+                <span class="common-container-2-heading common-container-2-heading-width" style="margin-left: 1.5vw; font-weight: 300; float: left; word-wrap: break-word; text-align: left;">'+point['title']+', '+point['date']+'</span>\
+                <span class="score-box" style="font-weight: 400; padding-right: 0; padding-left: 2vw; float: left; padding-top: 0.8vw;">'+point['score']+'</span>\
+                <span class="common-container-2-heading" style="width: max-content; font-weight: 300; padding-left: 1vw;">/ '+point['out-of']+'</span>\
+              </li>');
+          });
+        });
+      }
+      
+    </script>
+</head>
+<body>
+    <div class="navbar-container">
+      <img src="icons/logo.png" class="navbar-db-logo-img"/>
+      <div class="collapsed-navbar-logo-container">
+        <div class="collapsed-navbar-logo-top-line"></div>
+        <div class="collapsed-navbar-logo-mid-line"></div>
+        <div class="collapsed-navbar-logo-bottom-line"></div>
+      </div>
+    </div>
+
+    <div class="collapsible-navbar">
+      <span class="collapsible-navbar-item prof-summary-navitem">PROFILE SUMMARY</span>
+      <span class="collapsible-navbar-item pref-navitem">PREFERENCES</span>
+      <span class="collapsible-navbar-item tech-stack-navitem">TECH STACK</span>
+      <span class="collapsible-navbar-item education-navitem">EDUCATION</span>
+      <span class="collapsible-navbar-item work-ex-navitem">WORK EXPERIENCE</span>
+      <span class="collapsible-navbar-item projects-navitem">PROJECTS</span>
+      <span class="collapsible-navbar-item patents-navitem">PATENTS</span>
+      <span class="collapsible-navbar-item pubs-navitem">PUBLICATIONS</span>
+      <span class="collapsible-navbar-item cert-navitem">CERTIFICATIONS</span>
+      <span class="collapsible-navbar-item accolades-navitem">ACCOLADES</span>
+      <span class="collapsible-navbar-item skills-navitem">SKILLS</span>
+      <span class="collapsible-navbar-item scores-navitem">SCORES</span>
+    </div>
+
+    <div class="main-container">
+      <div class="intro-container-0">
+        <img src="icons/dp.png"/ class="dp-img">
+        <div class="intro-container-1">
+          <p class="intro-first-line-text-container">Hi, I'm Dhaval Bagal</p>
+          <p class="intro-second-line-text-container">I am a Computer Engineer with a predilection towards A.I. and Product Development</p>
+          <div class="resume-btn">GET MY RESUME</div>
+        </div>
+      </div>
+      
+      <div class="main-sub-heading profile-summary-heading">P R O F I L E&nbsp&nbsp&nbspS U M M A R Y</div>
+      <ul class="profile-summary-container"></ul>
+      <div class="main-sub-heading preferences-heading">P R E F E R E N C E S</div>
+      <ul><div class="preferences-container"></div></ul>
+      <div class="main-sub-heading tech-stack-heading">T E C H N O L O G Y&nbsp&nbsp&nbspS T A C K</div>
+      <ul><div class="tech-stack-container"></div></ul>
+      <div class="main-sub-heading education-heading">E D U C A T I O N</div>
+      <ul><div class="education-container"></div></ul>
+      <div class="main-sub-heading work-ex-heading" >W O R K&nbsp&nbsp&nbspE X P E R I E N C E</div>
+      <ul><div class="work-exp-container"></div></ul>
+      <div class="main-sub-heading accomplishments-heading">A C C O M P L I S H M E N T S</div><br>
+
+      <div class="accomplishments-sub-heading projects-sub-heading" name="inactive">P R O J E C T S</div>
+      <ul><div class="common-container-1 projects-container"></div></ul>
+
+      <div class="accomplishments-sub-heading patents-sub-heading" name="inactive">P A T E N T</div>
+      <ul><div class="common-container-1 patents-container"></div></ul>
+
+      <div class="accomplishments-sub-heading publications-sub-heading" name="inactive">P U B L I C A T I O N S</div>
+      <ul><div class="common-container-1 publications-container"></div></ul>
+
+      <div class="accomplishments-sub-heading certifications-sub-heading" name="inactive">C E R T I F I C A T I O N S</div>
+      <ul><div class="common-container-1 certifications-container"></div></ul>
+
+      <div class="accomplishments-sub-heading accolades-sub-heading" name="inactive">A C C O L A D E S</div>
+      <ul><div class="common-container-1 accolades-container"></div></ul>
+
+      <div class="accomplishments-sub-heading skills-sub-heading" name="inactive">S K I L L S</div>
+      <ul><div class="common-container-2 skills-container"></div></ul>
+
+      <div class="accomplishments-sub-heading scores-sub-heading" name="inactive">S C O R E S</div>
+      <ul><div class="common-container-2 scores-container"></div></ul>
+      <br><br><br><br>
+      
+    </div>
+    <div class='footer'>
+      <a href="mailto:dhavalbagal99@gmail.com"><img src="icons/gmail-icon.png" class="icon" style="margin-left: 3vw; margin-right:1vw;"/></a>
+      <a href="https://www.linkedin.com/in/dhaval-bagal/" target="_blank"><img src="icons/linkedin-icon.png" class="icon" style="margin-right: 10vw;"/></a>
+      <span class="copyright">© Copyright 2020 Dhaval Bagal. All rights reserved.</span>
+    </div>
+    
+    
+
+</body>
+</html>
