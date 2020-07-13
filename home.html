@@ -650,7 +650,7 @@
 
     <script>
       
-      clearAccomplishmentContainers = function(){
+      clearAccomplishmentContainers = function(callback){
         $('.projects-container').css('display','none');
         $('.patents-container').css('display','none');
         $('.publications-container').css('display','none');
@@ -658,169 +658,165 @@
         $('.accolades-container').css('display','none');
         $('.skills-container').css('display','none');
         $('.scores-container').css('display','none');
+        callback();
       }
 
       registerEvents = function(){
         $('.common-container-description').css('display','none');
-            $('.work-description-item').css('display','none');
+        $('.work-description-item').css('display','none');
 
-            $('.projects-sub-heading').click(function(){
-              $('html, body').animate({
-                  scrollTop: $('.projects-sub-heading').offset().top-150
-              });
-              $('div[name="active"]').css('display', 'none');
-              $('div[name="active"]').attr('name', 'inactive');
-              $('.projects-container').css('display','flex');
-              $('.projects-container').attr('name','active');
-              
-            });
+        $('.projects-sub-heading').click(function(){
+          $('html, body').animate({
+              scrollTop: $('.projects-sub-heading').offset().top-150
+          });
+          $('div[name="active"]').css('display', 'none');
+          $('div[name="active"]').attr('name', 'inactive');
+          $('.projects-container').css('display','flex');
+          $('.projects-container').attr('name','active');
+          
+        });
 
-            $('.patents-sub-heading').click(function(){
-              $('html, body').animate({
-                  scrollTop: $('.patents-sub-heading').offset().top-150
-              });
-              $('div[name="active"]').css('display', 'none');
-              $('div[name="active"]').attr('name', 'inactive');
-              $('.patents-container').css('display','flex');
-              $('.patents-container').attr('name','active');
-              
-            });
+        $('.patents-sub-heading').click(function(){
+          $('html, body').animate({
+              scrollTop: $('.patents-sub-heading').offset().top-150
+          });
+          $('div[name="active"]').css('display', 'none');
+          $('div[name="active"]').attr('name', 'inactive');
+          $('.patents-container').css('display','flex');
+          $('.patents-container').attr('name','active');
+          
+        });
 
-            $('.publications-sub-heading').click(function(){
-              $('html, body').animate({
-                  scrollTop: $('.publications-sub-heading').offset().top-150
-              });
-              $('div[name="active"]').css('display', 'none');
-              $('div[name="active"]').attr('name', 'inactive');
-              $('.publications-container').css('display','flex');
-              $('.publications-container').attr('name','active');
-              
-            });
+        $('.publications-sub-heading').click(function(){
+          $('html, body').animate({
+              scrollTop: $('.publications-sub-heading').offset().top-150
+          });
+          $('div[name="active"]').css('display', 'none');
+          $('div[name="active"]').attr('name', 'inactive');
+          $('.publications-container').css('display','flex');
+          $('.publications-container').attr('name','active');
+          
+        });
 
-            $('.certifications-sub-heading').click(function(){
-              $('html, body').animate({
-                  scrollTop: $('.certifications-sub-heading').offset().top-150
-              });
-              $('div[name="active"]').css('display', 'none');
-              $('div[name="active"]').attr('name', 'inactive');
-              $('.certifications-container').css('display','flex');
-              $('.certifications-container').attr('name','active');
-              
-            });
+        $('.certifications-sub-heading').click(function(){
+          $('html, body').animate({
+              scrollTop: $('.certifications-sub-heading').offset().top-150
+          });
+          $('div[name="active"]').css('display', 'none');
+          $('div[name="active"]').attr('name', 'inactive');
+          $('.certifications-container').css('display','flex');
+          $('.certifications-container').attr('name','active');
+          
+        });
 
-            $('.accolades-sub-heading').click(function(){
-              $('html, body').animate({
-                  scrollTop: $('.accolades-sub-heading').offset().top-150
-              });
-              $('div[name="active"]').css('display', 'none');
-              $('div[name="active"]').attr('name', 'inactive');
-              $('.accolades-container').css('display','flex');
-              $('.accolades-container').attr('name','active');
-              
-            });
+        $('.accolades-sub-heading').click(function(){
+          $('html, body').animate({
+              scrollTop: $('.accolades-sub-heading').offset().top-150
+          });
+          $('div[name="active"]').css('display', 'none');
+          $('div[name="active"]').attr('name', 'inactive');
+          $('.accolades-container').css('display','flex');
+          $('.accolades-container').attr('name','active');
+          
+        });
 
-            $('.skills-sub-heading').click(function(){
-              $('html, body').animate({
-                  scrollTop: $('.skills-sub-heading').offset().top-200
-              });
-              $('div[name="active"]').css('display', 'none');
-              $('div[name="active"]').attr('name', 'inactive');
-              $('.skills-container').css('display','flex');
-              $('.skills-container').attr('name','active');
-            
-            });
+        $('.skills-sub-heading').click(function(){
+          $('html, body').animate({
+              scrollTop: $('.skills-sub-heading').offset().top-200
+          });
+          $('div[name="active"]').css('display', 'none');
+          $('div[name="active"]').attr('name', 'inactive');
+          $('.skills-container').css('display','flex');
+          $('.skills-container').attr('name','active');
+        
+        });
 
-            $('.scores-sub-heading').click(function(){
-              $('html, body').animate({
-                  scrollTop: $('.scores-sub-heading').offset().top-200
-              });
-              $('div[name="active"]').css('display', 'none');
-              $('div[name="active"]').attr('name', 'inactive');
-              $('.scores-container').css('display','flex');
-              $('.scores-container').attr('name','active');
-              
-            });
+        $('.scores-sub-heading').click(function(){
+          $('html, body').animate({
+              scrollTop: $('.scores-sub-heading').offset().top-200
+          });
+          $('div[name="active"]').css('display', 'none');
+          $('div[name="active"]').attr('name', 'inactive');
+          $('.scores-container').css('display','flex');
+          $('.scores-container').attr('name','active');
+          
+        });
 
-            $(".projects-title").click(function(){displayDescription()});
-            $(".patents-title").click(function(){displayDescription()});
-            $(".publications-title").click(function(){displayDescription()});
-            $(".accolades-title").click(function(){displayDescription()});
-            $(".work-company-item").click(function(){displayWorkDesc()});
+        $(".projects-title").click(function(){displayDescription()});
+        $(".patents-title").click(function(){displayDescription()});
+        $(".publications-title").click(function(){displayDescription()});
+        $(".accolades-title").click(function(){displayDescription()});
+        $(".work-company-item").click(function(){displayWorkDesc()});
 
-            $(".collapsed-navbar-logo-container").click(function(){
-              if($(".collapsible-navbar").css("height")=="0px")
-              {
-                $(".collapsed-navbar-logo-top-line").css("animation-name","rotate-clockwise-cross");
-                $(".collapsed-navbar-logo-bottom-line").css("animation-name","rotate-anticlockwise-cross");
-                $(".collapsed-navbar-logo-mid-line").css("animation-name","mid-line-leave");
+        $(".collapsed-navbar-logo-container").click(function(){
+          if($(".collapsible-navbar").css("height")=="0px")
+          {
+            $(".collapsed-navbar-logo-top-line").css("animation-name","rotate-clockwise-cross");
+            $(".collapsed-navbar-logo-bottom-line").css("animation-name","rotate-anticlockwise-cross");
+            $(".collapsed-navbar-logo-mid-line").css("animation-name","mid-line-leave");
 
-                $(".collapsible-navbar").css({"height":"max-content", "display":"flex"});
-                $(".collapsible-navbar-item").css({"display":"block"});
-              }
-              else
-              {
-                closeSmallNavBar();
-              }
-            });
+            $(".collapsible-navbar").css({"height":"max-content", "display":"flex"});
+            $(".collapsible-navbar-item").css({"display":"block"});
+          }
+          else
+          {
+            closeSmallNavBar();
+          }
+        });
 
-            $(".prof-summary-navitem").click(function(){
-              $('html, body').animate({scrollTop: $('.profile-summary-heading').offset().top-100});
-              closeSmallNavBar();
-            });
-            $(".pref-navitem").click(function(){
-              $('html, body').animate({scrollTop: $('.preferences-heading').offset().top-100});
-              closeSmallNavBar();
-            });
-            $(".tech-stack-navitem").click(function(){
-              $('html, body').animate({scrollTop: $('.tech-stack-heading').offset().top-100});
-              closeSmallNavBar();
-            });
-            $(".education-navitem").click(function(){
-              $('html, body').animate({scrollTop: $('.education-heading').offset().top-100});
-              closeSmallNavBar();
-            });
-            $(".work-ex-navitem").click(function(){
-              $('html, body').animate({scrollTop: $('.work-ex-heading').offset().top-100});
-              closeSmallNavBar();
-            });
-            $(".projects-navitem").click(function(){
-              $('html, body').animate({scrollTop: $('.projects-sub-heading').offset().top-100});
-              closeSmallNavBar();
-            });
-            $(".patents-navitem").click(function(){
-              $('html, body').animate({scrollTop: $('.patents-sub-heading').offset().top-100});
-              closeSmallNavBar();
-            });
-            $(".pubs-navitem").click(function(){
-              $('html, body').animate({scrollTop: $('.publications-sub-heading').offset().top-100});
-              closeSmallNavBar();
-            });
-            $(".cert-navitem").click(function(){
-              $('html, body').animate({scrollTop: $('.certifications-sub-heading').offset().top-100});
-              closeSmallNavBar();
-            });
-            $(".accolades-navitem").click(function(){
-              $('html, body').animate({scrollTop: $('.accolades-sub-heading').offset().top-100});
-              closeSmallNavBar();
-            });
-            $(".skills-navitem").click(function(){
-              $('html, body').animate({scrollTop: $('.skills-sub-heading').offset().top-100});
-              closeSmallNavBar();
-            });
-            $(".scores-navitem").click(function(){
-              $('html, body').animate({scrollTop: $('.scores-sub-heading').offset().top-100});
-              closeSmallNavBar();
-            });
+        $(".prof-summary-navitem").click(function(){
+          $('html, body').animate({scrollTop: $('.profile-summary-heading').offset().top-100});
+          closeSmallNavBar();
+        });
+        $(".pref-navitem").click(function(){
+          $('html, body').animate({scrollTop: $('.preferences-heading').offset().top-100});
+          closeSmallNavBar();
+        });
+        $(".tech-stack-navitem").click(function(){
+          $('html, body').animate({scrollTop: $('.tech-stack-heading').offset().top-100});
+          closeSmallNavBar();
+        });
+        $(".education-navitem").click(function(){
+          $('html, body').animate({scrollTop: $('.education-heading').offset().top-100});
+          closeSmallNavBar();
+        });
+        $(".work-ex-navitem").click(function(){
+          $('html, body').animate({scrollTop: $('.work-ex-heading').offset().top-100});
+          closeSmallNavBar();
+        });
+        $(".projects-navitem").click(function(){
+          $('html, body').animate({scrollTop: $('.projects-sub-heading').offset().top-100});
+          closeSmallNavBar();
+        });
+        $(".patents-navitem").click(function(){
+          $('html, body').animate({scrollTop: $('.patents-sub-heading').offset().top-100});
+          closeSmallNavBar();
+        });
+        $(".pubs-navitem").click(function(){
+          $('html, body').animate({scrollTop: $('.publications-sub-heading').offset().top-100});
+          closeSmallNavBar();
+        });
+        $(".cert-navitem").click(function(){
+          $('html, body').animate({scrollTop: $('.certifications-sub-heading').offset().top-100});
+          closeSmallNavBar();
+        });
+        $(".accolades-navitem").click(function(){
+          $('html, body').animate({scrollTop: $('.accolades-sub-heading').offset().top-100});
+          closeSmallNavBar();
+        });
+        $(".skills-navitem").click(function(){
+          $('html, body').animate({scrollTop: $('.skills-sub-heading').offset().top-100});
+          closeSmallNavBar();
+        });
+        $(".scores-navitem").click(function(){
+          $('html, body').animate({scrollTop: $('.scores-sub-heading').offset().top-100});
+          closeSmallNavBar();
+        });
       }
       var ip;
       $(document).ready(function(){
         ip = "dhavalbagal.github.io/portfolio";
-        setTimeout(function(){
-          display();
-          clearAccomplishmentContainers();
-          registerEvents();
-        },10);
-      
+          display(clearAccomplishmentContainers(registerEvents));
       });
 
       $(window).on('resize', function(){
@@ -849,7 +845,7 @@
         $("#"+id).toggle();
       }
 
-      display = function(){
+      display = function(callback){
         displayProfileSummary(); 
         displayPreferences();
         displayTechStack();
@@ -862,6 +858,7 @@
         displayAccolades();
         displaySkills();
         displayScores();
+        callback();
       }
 
       displayProfileSummary = function(){
