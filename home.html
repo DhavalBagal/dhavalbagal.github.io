@@ -659,12 +659,9 @@
         $('.skills-container').css('display','none');
         $('.scores-container').css('display','none');
       }
-      var ip;
-      $(document).ready(function(){
-        ip = "dhavalbagal.github.io/portfolio";
-        display().done(function(){
-          clearAccomplishmentContainers().done(function(){
-            $('.common-container-description').css('display','none');
+
+      registerEvents = function(){
+        $('.common-container-description').css('display','none');
             $('.work-description-item').css('display','none');
 
             $('.projects-sub-heading').click(function(){
@@ -814,11 +811,16 @@
               $('html, body').animate({scrollTop: $('.scores-sub-heading').offset().top-100});
               closeSmallNavBar();
             });
-
-
-          });
-        });
-        
+      }
+      var ip;
+      $(document).ready(function(){
+        ip = "dhavalbagal.github.io/portfolio";
+        setTimeout(function(){
+          display();
+          clearAccomplishmentContainers();
+          registerEvents();
+        },10);
+      
       });
 
       $(window).on('resize', function(){
