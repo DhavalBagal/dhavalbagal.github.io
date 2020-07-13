@@ -860,7 +860,7 @@
       }
 
       displayProfileSummary = function(){
-        $.getJSON("http://" + ip + "/data.json", function (data){
+        $.getJSON("https://" + ip + "/data.json", function (data){
           points = data.profile_summary;
 
           $.each(points, function(i, point){
@@ -870,7 +870,7 @@
       }
 
       displayPreferences = function(){
-        $.getJSON("http://" + ip + "/data.json", function (data){
+        $.getJSON("https://" + ip + "/data.json", function (data){
           points = data.preferences;
 
           $.each(points, function(i, point){
@@ -880,7 +880,7 @@
       }
 
       displayTechStack = function(){
-        $.getJSON("http://" + ip + "/data.json", function (data){
+        $.getJSON("https://" + ip + "/data.json", function (data){
           points = data.tech_stack;
 
           for(var key in points){
@@ -893,7 +893,7 @@
       }
 
       displayEducation = function(){
-        $.getJSON("http://" + ip + "/data.json", function (data){
+        $.getJSON("https://" + ip + "/data.json", function (data){
           points = data.education;
 
           $.each(points, function(i, point){
@@ -918,7 +918,7 @@
       }
 
       displayWorkExp = function(){
-        $.getJSON("http://" + ip + "/data.json", function (data){
+        $.getJSON("https://" + ip + "/data.json", function (data){
           points = data.work_exp;
 
           $.each(points, function(i, point){
@@ -933,7 +933,7 @@
 
       displayProjects = function(){
         
-        $.getJSON("http://" + ip + "/data.json", function (data){
+        $.getJSON("https://" + ip + "/data.json", function (data){
           points = data.projects;
           $('head').append('<style>.projects-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
           $.each(points, function(i, point){
@@ -960,7 +960,7 @@
       }
 
       displayPatents = function(){
-        $.getJSON("http://" + ip + "/data.json", function (data){
+        $.getJSON("https://" + ip + "/data.json", function (data){
           points = data.patents;
           $('head').append('<style>.patents-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
           $.each(points, function(i, point){
@@ -984,7 +984,7 @@
       }
 
       displayPublications = function(){
-        $.getJSON("http://" + ip + "/data.json", function (data){
+        $.getJSON("https://" + ip + "/data.json", function (data){
           points = data.publications;
           $('head').append('<style>.publications-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
           $.each(points, function(i, point){
@@ -1008,7 +1008,7 @@
       }
 
       displayCertifications = function(){
-        $.getJSON("http://" + ip + "/data.json", function (data){
+        $.getJSON("https://" + ip + "/data.json", function (data){
           points = data.certifications;
           $('head').append('<style>.certifications-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
           $.each(points, function(i, point){
@@ -1022,7 +1022,7 @@
       }
 
       displayAccolades = function(){
-        $.getJSON("http://" + ip + "/data.json", function (data){
+        $.getJSON("https://" + ip + "/data.json", function (data){
           points = data.accolades;
           $('head').append('<style>.accolades-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
           $.each(points, function(i, point){
@@ -1036,7 +1036,7 @@
       }
 
       displaySkills = function(){
-        $.getJSON("http://" + ip + "/data.json", function (data){
+        $.getJSON("https://" + ip + "/data.json", function (data){
           points = data.skills;
           $('head').append('<style>.skills-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
           $.each(points, function(i, point){
@@ -1050,7 +1050,7 @@
       }
 
       displayScores = function(){
-        $.getJSON("http://" + ip + "/data.json", function (data){
+        $.getJSON("https://" + ip + "/data.json", function (data){
           points = data.scores;
           $('head').append('<style>.scores-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
           $.each(points, function(i, point){
