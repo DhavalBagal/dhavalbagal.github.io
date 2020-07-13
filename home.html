@@ -650,7 +650,7 @@
 
     <script>
       
-      clearAccomplishmentContainers = function(callback){
+      clearAccomplishmentContainers = function(){
         $('.projects-container').css('display','none');
         $('.patents-container').css('display','none');
         $('.publications-container').css('display','none');
@@ -658,7 +658,6 @@
         $('.accolades-container').css('display','none');
         $('.skills-container').css('display','none');
         $('.scores-container').css('display','none');
-        callback();
       }
 
       registerEvents = function(){
@@ -816,7 +815,13 @@
       var ip;
       $(document).ready(function(){
         ip = "dhavalbagal.github.io/portfolio";
-          display(clearAccomplishmentContainers(registerEvents));
+          display();
+          setTimeout(function(){
+            clearAccomplishmentContainers();
+            setTimeout(function(){
+              registerEvents();
+            });
+          }, 100);
       });
 
       $(window).on('resize', function(){
@@ -845,7 +850,7 @@
         $("#"+id).toggle();
       }
 
-      display = function(callback){
+      display = function(){
         displayProfileSummary(); 
         displayPreferences();
         displayTechStack();
@@ -858,7 +863,6 @@
         displayAccolades();
         displaySkills();
         displayScores();
-        callback();
       }
 
       displayProfileSummary = function(){
