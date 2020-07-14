@@ -866,11 +866,13 @@
         id = event.target.id;
         id = id.replace("-","-desc-");
         $('.work-description-item').css('display','none');
+        $(".common-container-description").css("display","none");
         $("#"+id).css("display","block");
       }
       displayDescription = function(){
         id = event.target.id;
         id = id.replace("-","-desc-");
+        $('.work-description-item').css('display','none');
         $(".common-container-description").css("display","none");
         $("#"+id).css("display","block");
       }
