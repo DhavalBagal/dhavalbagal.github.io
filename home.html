@@ -676,9 +676,6 @@
       }
 
       registerEvents = function(){
-        $('.common-container-description').css('display','none');
-        $('.work-description-item').css('display','none');
-
         $('.projects-sub-heading').click(function(){
           $('html, body').animate({
               scrollTop: $('.projects-sub-heading').offset().top-150
@@ -832,6 +829,8 @@
         ip = "dhavalbagal.github.io/portfolio";
           display();
           setTimeout(function(){
+            $('.common-container-description').css('display','none');
+            $('.work-description-item').css('display','none');
             clearAccomplishmentContainers();
             setTimeout(function(){
               registerEvents();
