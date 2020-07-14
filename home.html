@@ -695,8 +695,10 @@
         displayScores();
         setTimeout(function(){
           clearAccomplishmentContainers();
-          registerEvents();
         }, 100);
+        setTimeout(function(){
+          registerEvents();
+        }, 200);
       }
 
       openProjects = function(){
@@ -796,7 +798,7 @@
         $(".patents-title").click(function(){displayDescription()});
         $(".publications-title").click(function(){displayDescription()});
         $(".accolades-title").click(function(){displayDescription()});
-        $(".work-company-item").click(function(){displayWorkDesc(); alert("testing");});
+        $(".work-company-item").click(function(){displayWorkDesc();});
 
         $(".collapsed-navbar-logo-container").click(function(){
           if($(".collapsible-navbar").css("height")=="0px")
