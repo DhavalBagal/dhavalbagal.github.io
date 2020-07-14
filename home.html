@@ -694,30 +694,29 @@
         }, 100);
       }
 
-      registerEvents = function(){
-        $('.projects-sub-heading').click(function(){
-          $('html, body').animate({
-              scrollTop: $('.projects-sub-heading').offset().top-150
-          });
-          $('div[name="active"]').css('display', 'none');
-          $('div[name="active"]').attr('name', 'inactive');
-          $('.projects-container').css('display','flex');
-          $('.projects-container').attr('name','active');
-          $('.work-description-item').css('display','none');
+      openProjects = function(){
+        $('html, body').animate({
+            scrollTop: $('.projects-sub-heading').offset().top-150
         });
+        $('div[name="active"]').css('display', 'none');
+        $('div[name="active"]').attr('name', 'inactive');
+        $('.projects-container').css('display','flex');
+        $('.projects-container').attr('name','active');
+        $('.work-description-item').css('display','none');
+      }
 
-        $('.patents-sub-heading').click(function(){
-          $('html, body').animate({
-              scrollTop: $('.patents-sub-heading').offset().top-150
-          });
-          $('div[name="active"]').css('display', 'none');
-          $('div[name="active"]').attr('name', 'inactive');
-          $('.patents-container').css('display','flex');
-          $('.patents-container').attr('name','active');
-          $('.work-description-item').css('display','none');
+      openPatents = function(){
+        $('html, body').animate({
+            scrollTop: $('.patents-sub-heading').offset().top-150
         });
-
-        $('.publications-sub-heading').click(function(){
+        $('div[name="active"]').css('display', 'none');
+        $('div[name="active"]').attr('name', 'inactive');
+        $('.patents-container').css('display','flex');
+        $('.patents-container').attr('name','active');
+        $('.work-description-item').css('display','none');
+      }
+      
+      openPublications = function(){
           $('html, body').animate({
               scrollTop: $('.publications-sub-heading').offset().top-150
           });
@@ -726,9 +725,9 @@
           $('.publications-container').css('display','flex');
           $('.publications-container').attr('name','active');
           $('.work-description-item').css('display','none');
-        });
-
-        $('.certifications-sub-heading').click(function(){
+      }
+      
+      openCertifications = function(){
           $('html, body').animate({
               scrollTop: $('.certifications-sub-heading').offset().top-150
           });
@@ -737,9 +736,10 @@
           $('.certifications-container').css('display','flex');
           $('.certifications-container').attr('name','active');
           $('.work-description-item').css('display','none');
-        });
+        
+      }
 
-        $('.accolades-sub-heading').click(function(){
+      openAccolades = function(){
           $('html, body').animate({
               scrollTop: $('.accolades-sub-heading').offset().top-150
           });
@@ -748,9 +748,9 @@
           $('.accolades-container').css('display','flex');
           $('.accolades-container').attr('name','active');
           $('.work-description-item').css('display','none');
-        });
+        }
 
-        $('.skills-sub-heading').click(function(){
+      openSkills = function(){
           $('html, body').animate({
               scrollTop: $('.skills-sub-heading').offset().top-200
           });
@@ -759,9 +759,9 @@
           $('.skills-container').css('display','flex');
           $('.skills-container').attr('name','active');
           $('.work-description-item').css('display','none');
-        });
+        }
 
-        $('.scores-sub-heading').click(function(){
+      openScores = function(){
           $('html, body').animate({
               scrollTop: $('.scores-sub-heading').offset().top-200
           });
@@ -770,7 +770,22 @@
           $('.scores-container').css('display','flex');
           $('.scores-container').attr('name','active');
           $('.work-description-item').css('display','none');
-        });
+        }
+
+      registerEvents = function(){
+        $('.projects-sub-heading').click(function(){openProjects();});
+
+        $('.patents-sub-heading').click(function(){openPatents();});
+
+        $('.publications-sub-heading').click(function(){openPublications();});
+
+        $('.certifications-sub-heading').click(function(){openCertifications();});
+
+        $('.accolades-sub-heading').click(function(){openAccolades();});
+
+        $('.skills-sub-heading').click(function(){openSkills();});
+
+        $('.scores-sub-heading').click(function(){openScores();});
 
         $(".projects-title").click(function(){displayDescription()});
         $(".patents-title").click(function(){displayDescription()});
@@ -817,30 +832,37 @@
         $(".projects-navitem").click(function(){
           $('html, body').animate({scrollTop: $('.projects-sub-heading').offset().top-100});
           closeSmallNavBar();
+          openProjects();
         });
         $(".patents-navitem").click(function(){
           $('html, body').animate({scrollTop: $('.patents-sub-heading').offset().top-100});
           closeSmallNavBar();
+          openPatents();
         });
         $(".pubs-navitem").click(function(){
           $('html, body').animate({scrollTop: $('.publications-sub-heading').offset().top-100});
           closeSmallNavBar();
+          openPublications();
         });
         $(".cert-navitem").click(function(){
           $('html, body').animate({scrollTop: $('.certifications-sub-heading').offset().top-100});
           closeSmallNavBar();
+          openCertifications();
         });
         $(".accolades-navitem").click(function(){
           $('html, body').animate({scrollTop: $('.accolades-sub-heading').offset().top-100});
           closeSmallNavBar();
+          openAccolades();
         });
         $(".skills-navitem").click(function(){
           $('html, body').animate({scrollTop: $('.skills-sub-heading').offset().top-100});
           closeSmallNavBar();
+          openSkills();
         });
         $(".scores-navitem").click(function(){
           $('html, body').animate({scrollTop: $('.scores-sub-heading').offset().top-100});
           closeSmallNavBar();
+          openScores();
         });
       }
       var ip;
