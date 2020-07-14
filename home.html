@@ -901,6 +901,7 @@
         id = event.target.id;
         id = id.replace("-","-desc-");
         hideDescriptions();
+        clearAccomplishmentContainers();
         $("#"+id).css("display","block");
       }
       displayDescription = function(){
