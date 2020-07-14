@@ -900,13 +900,13 @@
       displayWorkDesc = function(){
         id = event.target.id;
         id = id.replace("-","-desc-");
-        $('.work-description-item').css('display','none');
+        hideDescriptions();
         $("#"+id).css("display","block");
       }
       displayDescription = function(){
         id = event.target.id;
         id = id.replace("-","-desc-");
-        $(".common-container-description").css("display","none");
+        hideDescriptions();
         $("#"+id).css("display","block");
       }
 
