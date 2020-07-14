@@ -680,7 +680,7 @@
         $('.scores-container').css('display','none');
       }
 
-      display = function(){
+      async function display(){
         displayProfileSummary(); 
         displayPreferences();
         displayTechStack();
@@ -693,6 +693,7 @@
         displayAccolades();
         displaySkills();
         displayScores();
+        return true;
       }
 
       openProjects = function(){
@@ -869,7 +870,10 @@
       var ip;
       $(document).ready(function(){
         ip = "dhavalbagal.github.io/portfolio";
-          $.when(display()).then(clearAccomplishmentContainers()).then(registerEvents());
+          display().then(function(){
+            clearAccomplishmentContainers();
+            registerEvents();
+          })
       });
 
       $(window).on('resize', function(){
