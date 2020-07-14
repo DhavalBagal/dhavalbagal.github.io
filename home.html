@@ -790,11 +790,11 @@
 
         $('.scores-sub-heading').click(function(){openScores();});
 
-        $(".projects-title").click(function(){displayDescription()});
-        $(".patents-title").click(function(){displayDescription()});
-        $(".publications-title").click(function(){displayDescription()});
-        $(".accolades-title").click(function(){displayDescription()});
-        $(".work-company-item").click(function(){displayWorkDesc()});
+        $('body').on('click', '.projects-title', function() {displayDescription()});
+        $('body').on('click', '.patents-title', function() {displayDescription()});
+        $('body').on('click', '.publications-title', function() {displayDescription()});
+        $('body').on('click', '.accolades-title', function() {displayDescription()});
+        $('body').on('click', '.work-company-title', function() {displayWorkDesc()});
 
         $(".collapsed-navbar-logo-container").click(function(){
           if($(".collapsible-navbar").css("height")=="0px")
@@ -872,10 +872,7 @@
 
       clearContainersAndRegister = function(){
         clearAccomplishmentContainers();
-        alert($(".work-company-item").css("display")+" testing");
-        while($(".work-company-item").css("display")==undefined && $(".projects-title").css("display")==undefined && $(".patents-title").css("display")==undefined && 
-        $(".publications-title").css("display")==undefined && $(".accolades-title").css("display")==undefined)
-          registerEvents();
+        registerEvents();
       }
 
       $(document).ready(function(){
