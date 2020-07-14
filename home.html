@@ -872,9 +872,9 @@
 
       clearContainersAndRegister = function(){
         clearAccomplishmentContainers();
-        alert($(".work-company-item").css("display"));
-        while($(".work-company-item").css("display")==null && $(".projects-title").css("display")==null && $(".patents-title").css("display")==null && 
-        $(".publications-title").css("display")==null && $(".accolades-title").css("display")==null)
+        alert($(".work-company-item").css("display")+" testing");
+        while($(".work-company-item").css("display")==undefined && $(".projects-title").css("display")==undefined && $(".patents-title").css("display")==undefined && 
+        $(".publications-title").css("display")==undefined && $(".accolades-title").css("display")==undefined)
           registerEvents();
       }
 
