@@ -491,7 +491,7 @@
         line-height: 1.5; 
         width: 70vw;
         word-wrap: break-word; 
-        display: block;
+        display: none;
         margin-top: 1vw;
         border-top: 0.15vw solid #28292B;
         border-bottom: 0.15vw solid #28292B;
@@ -500,7 +500,7 @@
       .common-container-description{
         line-height: 1.5; 
         width: 70vw;
-        display: block;
+        display: none;
         word-wrap: break-word;
         margin-top: 1vw;
         border-top: 0.15vw solid #28292B;
@@ -842,8 +842,6 @@
           $('html, body').animate({scrollTop: $('.scores-sub-heading').offset().top-100});
           closeSmallNavBar();
         });
-        $('.common-container-description').css('display','none');
-        $('.work-description-item').css('display','none');
       }
       var ip;
       $(document).ready(function(){
