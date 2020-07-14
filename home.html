@@ -665,7 +665,7 @@
 
     <script>
       
-      clearAccomplishmentContainers = function(){
+      clearAccomplishmentContainers = function(callback){
         $('.projects-container').css('display','none');
         $('.patents-container').css('display','none');
         $('.publications-container').css('display','none');
@@ -673,6 +673,25 @@
         $('.accolades-container').css('display','none');
         $('.skills-container').css('display','none');
         $('.scores-container').css('display','none');
+        $('.common-container-description').css('display','none');
+        $('.work-description-item').css('display','none');
+        callback();
+      }
+
+      display = function(callback){
+        displayProfileSummary(); 
+        displayPreferences();
+        displayTechStack();
+        displayEducation();
+        displayWorkExp();
+        displayProjects();
+        displayPatents();
+        displayPublications();
+        displayCertifications();
+        displayAccolades();
+        displaySkills();
+        displayScores();
+        callback();
       }
 
       registerEvents = function(){
@@ -827,15 +846,7 @@
       var ip;
       $(document).ready(function(){
         ip = "dhavalbagal.github.io/portfolio";
-          display();
-          setTimeout(function(){
-            $('.common-container-description').css('display','none');
-            $('.work-description-item').css('display','none');
-            clearAccomplishmentContainers();
-            setTimeout(function(){
-              registerEvents();
-            }, 100);
-          }, 100);
+          display(clearAccomplishmentContainers(registerEvents));
       });
 
       $(window).on('resize', function(){
@@ -862,21 +873,6 @@
         id = id.replace("-","-desc-");
         $(".common-container-description").css("display","none");
         $("#"+id).toggle();
-      }
-
-      display = function(){
-        displayProfileSummary(); 
-        displayPreferences();
-        displayTechStack();
-        displayEducation();
-        displayWorkExp();
-        displayProjects();
-        displayPatents();
-        displayPublications();
-        displayCertifications();
-        displayAccolades();
-        displaySkills();
-        displayScores();
       }
 
       displayProfileSummary = function(){
