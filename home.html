@@ -18,6 +18,7 @@
       /* 200px - 400px [xs] */
       @media only screen and (min-width: 200px) {
         .navbar-container, .navbar-db-logo-img{height: 15.5vw;}
+        .long-navbar-container{display: none;}
         .icon{width: 7.75vw; height: 7.75vw;}
         .collapsible-navbar{top: 15.5vw; display: flex;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
@@ -71,6 +72,7 @@
       /* 400px - 600px [sm] */
       @media only screen and (min-width: 400px) {
         .navbar-container, .navbar-db-logo-img{height: 12.5vw;}
+        .long-navbar-container{display: none;}
         .icon{width: 3.75vw; height: 3.75vw;}
         .collapsible-navbar{top: 12.5vw;display: flex;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: flex;}
@@ -125,6 +127,8 @@
       /* 600px - 768px [md] */
       @media only screen and (min-width: 600px) {
         .navbar-container, .navbar-db-logo-img{height: 10.5vw;}
+        .long-navbar-container{display: flex; width: 6vw;}
+        .long-navbar-item-container, .long-navbar-item{width: 6vw; height: 6vw;}
         .icon{width: 3.15vw; height: 3.15vw;}
         .collapsible-navbar{height: 0vw; display: none;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
@@ -178,6 +182,8 @@
       /* 768px - 992px [lg] */
       @media only screen and (min-width: 768px){
         .navbar-container, .navbar-db-logo-img{height: 8.5vw;}
+        .long-navbar-container{display: flex; width: 6vw;}
+        .long-navbar-item-container, .long-navbar-item{width: 6vw; height: 6vw;}
         .icon{width: 2.55vw; height: 2.55vw;}
         .collapsible-navbar{height: 0vw; display: none;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
@@ -235,6 +241,8 @@
       /* 992px - 1200px [xl] */
       @media only screen and (min-width: 992px) {
         .navbar-container, .navbar-db-logo-img{height: 7.5vw;}
+        .long-navbar-container{display: flex; width: 4vw;}
+        .long-navbar-item-container, .long-navbar-item{width: 4vw; height: 4vw;}
         .icon{width: 2.25vw; height: 2.25vw;}
         .collapsible-navbar{height: 0vw; display: none;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
@@ -292,6 +300,8 @@
       /* 1200px and above [xxl] */
       @media only screen and (min-width: 1200px) {
         .navbar-container, .navbar-db-logo-img{height: 6.5vw; background-color: #28292B;}
+        .long-navbar-container{display: flex; width: 4vw;}
+        .long-navbar-item-container, .long-navbar-item{width: 4vw; height: 4vw;}
         .collapsible-navbar{height: 0vw; display: none;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
         .main-container{top: 6.5vw;}
@@ -658,6 +668,31 @@
 
       @keyframes small-nav-open{100%{height: max-content;}}
       @keyframes small-nav-close{100%{height: 0vw;}}
+
+      .long-navbar-container{
+        background-color: #28292B;
+        position: fixed;
+        right: 2vw;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+        color: white;
+        z-index: 300;
+        box-shadow: 0px 0px 20px #28292B;
+      }
+      .long-navbar-item-container{
+        background-color: #28292B;
+        padding-top: 0.5vw;
+        padding-bottom: 0.5vw;
+        
+      }
+      .long-navbar-item-container:hover{
+        background-color: #7C7C7C;
+        border-bottom: 0.2vw solid gainsboro;
+      }
     </style>
 
     <script>
@@ -690,7 +725,7 @@
 
       openProjects = function(){
         $('html, body').animate({
-            scrollTop: $('.projects-sub-heading').offset().top-150
+            scrollTop: $('.projects-sub-heading').offset().top-120
         });
         $('div[name="active"]').css('display', 'none');
         $('div[name="active"]').attr('name', 'inactive');
@@ -701,7 +736,7 @@
 
       openPatents = function(){
         $('html, body').animate({
-            scrollTop: $('.patents-sub-heading').offset().top-150
+            scrollTop: $('.patents-sub-heading').offset().top-120
         });
         $('div[name="active"]').css('display', 'none');
         $('div[name="active"]').attr('name', 'inactive');
@@ -712,7 +747,7 @@
       
       openPublications = function(){
           $('html, body').animate({
-              scrollTop: $('.publications-sub-heading').offset().top-150
+              scrollTop: $('.publications-sub-heading').offset().top-120
           });
           $('div[name="active"]').css('display', 'none');
           $('div[name="active"]').attr('name', 'inactive');
@@ -723,7 +758,7 @@
       
       openCertifications = function(){
           $('html, body').animate({
-              scrollTop: $('.certifications-sub-heading').offset().top-150
+              scrollTop: $('.certifications-sub-heading').offset().top-120
           });
           $('div[name="active"]').css('display', 'none');
           $('div[name="active"]').attr('name', 'inactive');
@@ -735,7 +770,7 @@
 
       openAccolades = function(){
           $('html, body').animate({
-              scrollTop: $('.accolades-sub-heading').offset().top-150
+              scrollTop: $('.accolades-sub-heading').offset().top-120
           });
           $('div[name="active"]').css('display', 'none');
           $('div[name="active"]').attr('name', 'inactive');
@@ -770,6 +805,7 @@
         $('.work-description-item').css('display','none');
         $('.common-container-description').css('display','none');
       }
+      
       registerEvents = function(){
         $('.projects-sub-heading').click(function(){openProjects(); hideDescriptions();});
 
@@ -806,81 +842,85 @@
             closeSmallNavBar();
           }
         });
-
+        $(".accomplishments-navitem").click(function(){
+          $('html, body').animate({scrollTop: $('.accomplishments-heading').offset().top-120});
+          hideDescriptions();
+          clearAccomplishmentContainers();
+        });
         $(".prof-summary-navitem").click(function(){
-          $('html, body').animate({scrollTop: $('.profile-summary-heading').offset().top-100});
+          $('html, body').animate({scrollTop: $('.profile-summary-heading').offset().top-120});
           closeSmallNavBar();
           hideDescriptions();
           clearAccomplishmentContainers();
         });
         $(".pref-navitem").click(function(){
-          $('html, body').animate({scrollTop: $('.preferences-heading').offset().top-100});
+          $('html, body').animate({scrollTop: $('.preferences-heading').offset().top-120});
           closeSmallNavBar();
           hideDescriptions();
           clearAccomplishmentContainers();
         });
         $(".tech-stack-navitem").click(function(){
-          $('html, body').animate({scrollTop: $('.tech-stack-heading').offset().top-100});
+          $('html, body').animate({scrollTop: $('.tech-stack-heading').offset().top-120});
           closeSmallNavBar();
           hideDescriptions();
           clearAccomplishmentContainers();
         });
         $(".education-navitem").click(function(){
-          $('html, body').animate({scrollTop: $('.education-heading').offset().top-100});
+          $('html, body').animate({scrollTop: $('.education-heading').offset().top-120});
           closeSmallNavBar();
           hideDescriptions();
           clearAccomplishmentContainers();
         });
         $(".work-ex-navitem").click(function(){
-          $('html, body').animate({scrollTop: $('.work-ex-heading').offset().top-100});
+          $('html, body').animate({scrollTop: $('.work-ex-heading').offset().top-120});
           closeSmallNavBar();
           hideDescriptions();
           clearAccomplishmentContainers();
         });
         $(".projects-navitem").click(function(){
-          $('html, body').animate({scrollTop: $('.projects-sub-heading').offset().top-100});
+          $('html, body').animate({scrollTop: $('.projects-sub-heading').offset().top-120});
           closeSmallNavBar();
           hideDescriptions();
           clearAccomplishmentContainers();
           openProjects();
         });
         $(".patents-navitem").click(function(){
-          $('html, body').animate({scrollTop: $('.patents-sub-heading').offset().top-100});
+          $('html, body').animate({scrollTop: $('.patents-sub-heading').offset().top-120});
           closeSmallNavBar();
           hideDescriptions();
           clearAccomplishmentContainers();
           openPatents();
         });
         $(".pubs-navitem").click(function(){
-          $('html, body').animate({scrollTop: $('.publications-sub-heading').offset().top-100});
+          $('html, body').animate({scrollTop: $('.publications-sub-heading').offset().top-120});
           closeSmallNavBar();
           hideDescriptions();
           clearAccomplishmentContainers();
           openPublications();
         });
         $(".cert-navitem").click(function(){
-          $('html, body').animate({scrollTop: $('.certifications-sub-heading').offset().top-100});
+          $('html, body').animate({scrollTop: $('.certifications-sub-heading').offset().top-120});
           closeSmallNavBar();
           hideDescriptions();
           clearAccomplishmentContainers();
           openCertifications();
         });
         $(".accolades-navitem").click(function(){
-          $('html, body').animate({scrollTop: $('.accolades-sub-heading').offset().top-100});
+          $('html, body').animate({scrollTop: $('.accolades-sub-heading').offset().top-120});
           closeSmallNavBar();
           hideDescriptions();
           clearAccomplishmentContainers();
           openAccolades();
         });
         $(".skills-navitem").click(function(){
-          $('html, body').animate({scrollTop: $('.skills-sub-heading').offset().top-100});
+          $('html, body').animate({scrollTop: $('.skills-sub-heading').offset().top-120});
           closeSmallNavBar();
           hideDescriptions();
           clearAccomplishmentContainers();
           openSkills();
         });
         $(".scores-navitem").click(function(){
-          $('html, body').animate({scrollTop: $('.scores-sub-heading').offset().top-100});
+          $('html, body').animate({scrollTop: $('.scores-sub-heading').offset().top-120});
           closeSmallNavBar();
           hideDescriptions();
           clearAccomplishmentContainers();
@@ -919,6 +959,7 @@
         clearAccomplishmentContainers();
         $("#"+id).css("display","block");
       }
+      
       displayDescription = function(){
         id = event.target.id;
         id = id.replace("-","-desc-");
@@ -1139,6 +1180,27 @@
         <div class="collapsed-navbar-logo-top-line"></div>
         <div class="collapsed-navbar-logo-mid-line"></div>
         <div class="collapsed-navbar-logo-bottom-line"></div>
+      </div>
+    </div>
+
+    <div class="long-navbar-container">
+      <div class="long-navbar-item-container">
+        <img src="icons/profile-summary.png" class="long-navbar-item prof-summary-navitem"/>
+      </div>
+      <div class="long-navbar-item-container">
+        <img src="icons/preferences.png" class="long-navbar-item pref-navitem"/>
+      </div>
+      <div class="long-navbar-item-container">
+        <img src="icons/tech-stack.png" class="long-navbar-item tech-stack-navitem"/>
+      </div>
+      <div class="long-navbar-item-container">
+        <img src="icons/education.png" class="long-navbar-item education-navitem"/>
+      </div>
+      <div class="long-navbar-item-container">
+        <img src="icons/work-exp.png" class="long-navbar-item work-ex-navitem"/>
+      </div>
+      <div class="long-navbar-item-container">
+        <img src="icons/accomplishments.png" class="long-navbar-item accomplishments-navitem"/>
       </div>
     </div>
 
