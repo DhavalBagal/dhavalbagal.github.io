@@ -127,8 +127,9 @@
       /* 600px - 768px [md] */
       @media only screen and (min-width: 600px) {
         .navbar-container, .navbar-db-logo-img{height: 10.5vw;}
-        .long-navbar-container{display: flex; width: 6vw;}
-        .long-navbar-item-container, .long-navbar-item{width: 6vw; height: 6vw;}
+        .long-navbar-container{display: flex; width: 4vw;}
+        .long-navbar-item-container{width: 4vw; height: 4vw;}
+        .long-navbar-item{width: 3vw; height: 3vw;}
         .icon{width: 3.15vw; height: 3.15vw;}
         .collapsible-navbar{height: 0vw; display: none;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
@@ -182,8 +183,9 @@
       /* 768px - 992px [lg] */
       @media only screen and (min-width: 768px){
         .navbar-container, .navbar-db-logo-img{height: 8.5vw;}
-        .long-navbar-container{display: flex; width: 6vw;}
-        .long-navbar-item-container, .long-navbar-item{width: 6vw; height: 6vw;}
+        .long-navbar-container{display: flex; width: 4vw;}
+        .long-navbar-item-container{width: 4vw; height: 4vw;}
+        .long-navbar-item{width: 3vw; height: 3vw;}
         .icon{width: 2.55vw; height: 2.55vw;}
         .collapsible-navbar{height: 0vw; display: none;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
@@ -242,7 +244,8 @@
       @media only screen and (min-width: 992px) {
         .navbar-container, .navbar-db-logo-img{height: 7.5vw;}
         .long-navbar-container{display: flex; width: 4vw;}
-        .long-navbar-item-container, .long-navbar-item{width: 4vw; height: 4vw;}
+        .long-navbar-item-container{width: 4vw; height: 4vw;}
+        .long-navbar-item{width: 3vw; height: 3vw;}
         .icon{width: 2.25vw; height: 2.25vw;}
         .collapsible-navbar{height: 0vw; display: none;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
@@ -301,7 +304,8 @@
       @media only screen and (min-width: 1200px) {
         .navbar-container, .navbar-db-logo-img{height: 6.5vw; background-color: #28292B;}
         .long-navbar-container{display: flex; width: 4vw;}
-        .long-navbar-item-container, .long-navbar-item{width: 4vw; height: 4vw;}
+        .long-navbar-item-container{width: 4vw; height: 4vw;}
+        .long-navbar-item{width: 3vw; height: 3vw;}
         .collapsible-navbar{height: 0vw; display: none;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
         .main-container{top: 6.5vw;}
@@ -687,12 +691,14 @@
         background-color: #28292B;
         padding-top: 0.5vw;
         padding-bottom: 0.5vw;
-        
+        display: flex;
+        justify-content: center;
       }
       .long-navbar-item-container:hover{
         background-color: #7C7C7C;
         border-bottom: 0.2vw solid gainsboro;
       }
+      .long-navbar-item{align-self: center;}
     </style>
 
     <script>
