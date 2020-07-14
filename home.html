@@ -673,8 +673,6 @@
         $('.accolades-container').css('display','none');
         $('.skills-container').css('display','none');
         $('.scores-container').css('display','none');
-        $('.common-container-description').css('display','none');
-        $('.work-description-item').css('display','none');
       }
 
       display = function(){
@@ -844,6 +842,8 @@
           $('html, body').animate({scrollTop: $('.scores-sub-heading').offset().top-100});
           closeSmallNavBar();
         });
+        $('.common-container-description').css('display','none');
+        $('.work-description-item').css('display','none');
       }
       var ip;
       $(document).ready(function(){
