@@ -681,7 +681,7 @@
         $('.scores-container').css('display','none');
       }
 
-      async function display(){
+      function display(callback){
         displayProfileSummary(); 
         displayPreferences();
         displayTechStack();
@@ -694,7 +694,7 @@
         displayAccolades();
         displaySkills();
         displayScores();
-        return true;
+        callback();
       }
 
       openProjects = function(){
@@ -869,12 +869,15 @@
         });
       }
       var ip;
+
+      clearContainersAndRegister = function(){
+        clearAccomplishmentContainers();
+        registerEvents();
+      }
+      
       $(document).ready(function(){
         ip = "dhavalbagal.github.io/portfolio";
-          display().then(function(){
-            clearAccomplishmentContainers();
-            registerEvents();
-          })
+        display(clearContainersAndRegister);
       });
 
       $(window).on('resize', function(){
