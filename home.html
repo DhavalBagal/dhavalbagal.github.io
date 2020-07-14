@@ -341,7 +341,12 @@
       }
 
       html, body{margin: 0;}
-      *{font-family: "Helvetica Neue";color: #28292B;}
+      *{font-family: "Helvetica Neue";color: #28292B;
+        user-select: none;
+        -webkit-user-select: none; /* Chrome/Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+ */
+      }
       .navbar-container{
         background-color: #28292B; 
         width: 100vw; 
@@ -432,10 +437,6 @@
         color: white;
         background-color: #28292B;
         text-decoration: none;
-        user-select: none;
-        -webkit-user-select: none; /* Chrome/Safari */        
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* IE10+ */
       }
       .resume-btn:hover{
         animation-name: btn-zoom-effect2;
@@ -498,12 +499,6 @@
         border-top: 0.15vw solid #28292B;
         border-bottom: 0.15vw solid #28292B;
       } 
-      .work-company-item{
-        user-select: none;
-        -webkit-user-select: none; /* Chrome/Safari */        
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* IE10+ */
-      }
       .common-container-description{
         line-height: 1.5; 
         width: 70vw;
@@ -520,28 +515,16 @@
         word-wrap: break-word; 
         display: inline-block;
         margin-top: 1vw;
-        user-select: none;
-        -webkit-user-select: none; /* Chrome/Safari */        
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* IE10+ */
       }
       .common-container-2-heading{
         line-height: 1.5; 
         word-wrap: break-word; 
         display: inline-block;
         margin-top: 1vw;
-        user-select: none;
-        -webkit-user-select: none; /* Chrome/Safari */        
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* IE10+ */
       }
       ul{padding-left: 0;}
       .accomplishments-sub-heading{
         color: #28292B;
-        user-select: none;
-        -webkit-user-select: none; /* Chrome/Safari */        
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* IE10+ */
         font-weight: 400;
         text-align: center;
         display: flex;
