@@ -775,26 +775,30 @@
           $('.work-description-item').css('display','none');
         }
 
+      hideDescriptions = function(){
+        $('.work-description-item').css('display','none');
+        $('.common-container-description').css('display','none');
+      }
       registerEvents = function(){
-        $('.projects-sub-heading').click(function(){openProjects();});
+        $('.projects-sub-heading').click(function(){openProjects(); hideDescriptions();});
 
-        $('.patents-sub-heading').click(function(){openPatents();});
+        $('.patents-sub-heading').click(function(){openPatents(); hideDescriptions();});
 
-        $('.publications-sub-heading').click(function(){openPublications();});
+        $('.publications-sub-heading').click(function(){openPublications(); hideDescriptions();});
 
-        $('.certifications-sub-heading').click(function(){openCertifications();});
+        $('.certifications-sub-heading').click(function(){openCertifications(); hideDescriptions();});
 
-        $('.accolades-sub-heading').click(function(){openAccolades();});
+        $('.accolades-sub-heading').click(function(){openAccolades(); hideDescriptions();});
 
-        $('.skills-sub-heading').click(function(){openSkills();});
+        $('.skills-sub-heading').click(function(){openSkills(); hideDescriptions();});
 
-        $('.scores-sub-heading').click(function(){openScores();});
+        $('.scores-sub-heading').click(function(){openScores(); hideDescriptions();});
 
-        $('body').on('click', '.projects-title', function() {displayDescription()});
-        $('body').on('click', '.patents-title', function() {displayDescription()});
-        $('body').on('click', '.publications-title', function() {displayDescription()});
-        $('body').on('click', '.accolades-title', function() {displayDescription()});
-        $('body').on('click', '.work-company-title', function() {displayWorkDesc()});
+        $('.projects-container').on('click', '.projects-title', function() {displayDescription()});
+        $('.patents-container').on('click', '.patents-title', function() {displayDescription()});
+        $('.publications-container').on('click', '.publications-title', function() {displayDescription()});
+        $('.accolades-container').on('click', '.accolades-title', function() {displayDescription()});
+        $('.work-exp-container').on('click', '.work-company-title', function() {displayWorkDesc()});
 
         $(".collapsed-navbar-logo-container").click(function(){
           if($(".collapsible-navbar").css("height")=="0px")
