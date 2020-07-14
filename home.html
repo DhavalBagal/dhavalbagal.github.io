@@ -872,9 +872,10 @@
 
       clearContainersAndRegister = function(){
         clearAccomplishmentContainers();
-        registerEvents();
+        while($(".work-company-item")==null)
+          registerEvents();
       }
-      
+
       $(document).ready(function(){
         ip = "dhavalbagal.github.io/portfolio";
         display(clearContainersAndRegister);
