@@ -18,6 +18,7 @@
       /* 200px - 400px [xs] */
       @media only screen and (min-width: 200px) {
         .navbar-container, .navbar-db-logo-img{height: 15.5vw;}
+        .icon{width: 7.75vw; height: 7.75vw;}
         .collapsible-navbar{top: 15.5vw; display: flex;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
         .main-container{top: 15.5vw;}
@@ -70,6 +71,7 @@
       /* 400px - 600px [sm] */
       @media only screen and (min-width: 400px) {
         .navbar-container, .navbar-db-logo-img{height: 12.5vw;}
+        .icon{width: 3.75vw; height: 3.75vw;}
         .collapsible-navbar{top: 12.5vw;display: flex;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: flex;}
         .main-container{top: 12.5vw;}
@@ -123,6 +125,7 @@
       /* 600px - 768px [md] */
       @media only screen and (min-width: 600px) {
         .navbar-container, .navbar-db-logo-img{height: 10.5vw;}
+        .icon{width: 3.15vw; height: 3.15vw;}
         .collapsible-navbar{height: 0vw; display: none;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
         .main-container{top: 10.5vw;}
@@ -175,6 +178,7 @@
       /* 768px - 992px [lg] */
       @media only screen and (min-width: 768px){
         .navbar-container, .navbar-db-logo-img{height: 8.5vw;}
+        .icon{width: 2.55vw; height: 2.55vw;}
         .collapsible-navbar{height: 0vw; display: none;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
         .main-container{top: 8.5vw;}
@@ -231,6 +235,7 @@
       /* 992px - 1200px [xl] */
       @media only screen and (min-width: 992px) {
         .navbar-container, .navbar-db-logo-img{height: 7.5vw;}
+        .icon{width: 2.25vw; height: 2.25vw;}
         .collapsible-navbar{height: 0vw; display: none;}
         .collapsible-navbar-item, .collapsed-navbar-logo-container{display: none;}
         .main-container{top: 7.5vw;}
@@ -567,18 +572,16 @@
       }
       .footer{
         background-color: #28292B;
-        padding-top: 1vw;
-        padding-bottom: 1vw;
+        padding-top: 3px;
+        padding-bottom: 3px;
         width: 100vw;
         margin-top: 5vw;
         position: fixed;
         bottom: 0;
         left: 0;
-        display: inline-block;
+        display: flex;
       }
       .icon{
-        width: 3vw;
-        height: 3vw;
         display: inline-block;
       }
       .copyright{
@@ -586,9 +589,9 @@
         color: white; 
         text-align: center;
         font-weight: 300;
-        font-size: 1.5vw;
+        font-size: 1vw;
         position: absolute;
-        top: 2vw;
+        align-self: center;
         right: 5vw;
       }
       .collapsible-navbar{
