@@ -872,7 +872,8 @@
 
       clearContainersAndRegister = function(){
         clearAccomplishmentContainers();
-        while($(".work-company-item")==null)
+        while($(".work-company-item")==null && $(".projects-title")==null && $(".patents-title")==null && 
+        $(".publications-title")==null && $(".accolades-title")==null)
           registerEvents();
       }
 
