@@ -229,6 +229,12 @@
   "certifications":
   [
     {
+      "title":"The Bits and Bytes of Computer Networking",
+      "issuer":"Google",
+      "date":"July 2020",
+      "link-to-verify":"https://www.coursera.org/account/accomplishments/certificate/4N4U6NUHNANE"
+    },
+    {
       "title":"Sequence Models",
       "issuer":"Coursera",
       "date":"Jun 2020",
