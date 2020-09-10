@@ -705,7 +705,7 @@
       
       clearAccomplishmentContainers = function(){
         $('.projects-container').css('display','none');
-        $('.patents-container').css('display','none');
+        //$('.patents-container').css('display','none');
         $('.publications-container').css('display','none');
         $('.certifications-container').css('display','none');
         $('.accolades-container').css('display','none');
@@ -720,7 +720,7 @@
         displayEducation();
         displayWorkExp();
         displayProjects();
-        displayPatents();
+        //displayPatents();
         displayPublications();
         displayCertifications();
         displayAccolades();
@@ -740,7 +740,7 @@
         $('.work-description-item').css('display','none');
       }
 
-      openPatents = function(){
+      /* openPatents = function(){
         $('html, body').animate({
             scrollTop: $('.patents-sub-heading').offset().top-120
         });
@@ -749,7 +749,7 @@
         $('.patents-container').css('display','flex');
         $('.patents-container').attr('name','active');
         $('.work-description-item').css('display','none');
-      }
+      } */
       
       openPublications = function(){
           $('html, body').animate({
@@ -815,7 +815,7 @@
       registerEvents = function(){
         $('.projects-sub-heading').click(function(){openProjects(); hideDescriptions();});
 
-        $('.patents-sub-heading').click(function(){openPatents(); hideDescriptions();});
+        //$('.patents-sub-heading').click(function(){openPatents(); hideDescriptions();});
 
         $('.publications-sub-heading').click(function(){openPublications(); hideDescriptions();});
 
@@ -828,7 +828,7 @@
         $('.scores-sub-heading').click(function(){openScores(); hideDescriptions();});
 
         $('.projects-container').on('click', '.projects-title', function() {displayDescription()});
-        $('.patents-container').on('click', '.patents-title', function() {displayDescription()});
+        //$('.patents-container').on('click', '.patents-title', function() {displayDescription()});
         $('.publications-container').on('click', '.publications-title', function() {displayDescription()});
         $('.accolades-container').on('click', '.accolades-title', function() {displayDescription()});
         $('.work-exp-container').on('click', '.work-company-item', function() {displayWorkDesc()});
@@ -890,13 +890,13 @@
           clearAccomplishmentContainers();
           openProjects();
         });
-        $(".patents-navitem").click(function(){
+        /* $(".patents-navitem").click(function(){
           $('html, body').animate({scrollTop: $('.patents-sub-heading').offset().top-120});
           closeSmallNavBar();
           hideDescriptions();
           clearAccomplishmentContainers();
           openPatents();
-        });
+        }); */
         $(".pubs-navitem").click(function(){
           $('html, body').animate({scrollTop: $('.publications-sub-heading').offset().top-120});
           closeSmallNavBar();
@@ -1073,7 +1073,7 @@
         });
       }
 
-      displayPatents = function(){
+      /* displayPatents = function(){
         $.getJSON("https://" + ip + "/data.json", function (data){
           points = data.patents;
           $('head').append('<style>.patents-sub-heading::before{content:"'+points.length.toString()+'";}</style>');
@@ -1095,7 +1095,7 @@
             }
           });
         });
-      }
+      } */
 
       displayPublications = function(){
         $.getJSON("https://" + ip + "/data.json", function (data){
@@ -1217,7 +1217,7 @@
       <span class="collapsible-navbar-item education-navitem">EDUCATION</span>
       <span class="collapsible-navbar-item work-ex-navitem">WORK EXPERIENCE</span>
       <span class="collapsible-navbar-item projects-navitem">PROJECTS</span>
-      <span class="collapsible-navbar-item patents-navitem">PATENTS</span>
+      <!-- <span class="collapsible-navbar-item patents-navitem">PATENTS</span> -->
       <span class="collapsible-navbar-item pubs-navitem">PUBLICATIONS</span>
       <span class="collapsible-navbar-item cert-navitem">CERTIFICATIONS</span>
       <span class="collapsible-navbar-item accolades-navitem">ACCOLADES</span>
@@ -1250,8 +1250,8 @@
       <div class="accomplishments-sub-heading projects-sub-heading" name="inactive">P R O J E C T S</div>
       <ul><div class="common-container-1 projects-container"></div></ul>
 
-      <div class="accomplishments-sub-heading patents-sub-heading" name="inactive">P A T E N T</div>
-      <ul><div class="common-container-1 patents-container"></div></ul>
+      <!-- <div class="accomplishments-sub-heading patents-sub-heading" name="inactive">P A T E N T</div>
+      <ul><div class="common-container-1 patents-container"></div></ul> -->
 
       <div class="accomplishments-sub-heading publications-sub-heading" name="inactive">P U B L I C A T I O N S</div>
       <ul><div class="common-container-1 publications-container"></div></ul>
